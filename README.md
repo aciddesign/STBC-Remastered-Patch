@@ -87,6 +87,8 @@ This repo holds releases only. It contains no game files, so you need your own c
 - A new LCARS Configure, with sliders, profiles, a Mod Menus page and live previews from the in-battle Esc menu.
 - LCARS main menu top bar, New Game, Load Game, Multiplayer (with an in-game Esc page) and the quit dialog.
 - A new LCARS Quick Battle that reads your install's own ships and regions (no Foundation needed), with a 3D ship preview.
+- Spectate mode in Quick Battle, with its own camera, so you can sit back and watch the fight.
+- Early cinematic cameras, optional: F7 Duel Cam and F8 War Correspondent. More to come.
 - Glass LCARS: backlit "light box" panels with a sheen, sharp fonts in every LCARS menu, and a calmer backdrop when you open Configure in battle.
 - Faster, sharper LCARS menus: they react at once, and nothing from the stock menus shows or reacts behind them.
 - Startup Sequence: an LCARS "incoming transmission" opening around the 1080 movie.
@@ -132,6 +134,7 @@ This repo holds releases only. It contains no game files, so you need your own c
 - **Bridge co-op for roleplay groups.** Each player takes a station on the same ship (Helm, Tactical, Science, Engineering) and the captain gives the orders.
 - **Mission scripter.** Place ships, set objectives, and write the hails and story beats for your own crew.
 - **More screen setups.** A station console on a second monitor, the view across several monitors, or a tablet as a station panel.
+- **CameraNX.** Cinematic cameras that frame the battle like a space shot from the show.
 - **VR.** The captain's chair, on the bridge.
 - **The LCARS app.** One app to install, update and manage the patch and its add-ons.
 - And a lot more.
