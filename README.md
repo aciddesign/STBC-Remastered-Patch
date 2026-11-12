@@ -59,7 +59,6 @@ Grab the latest from **[Releases](../../releases/latest)** (patch zip + What's N
 - Weapon hits always light the hull, even on the Borg cube.
 - AI with torpedo evasion off skips the unused torpedo watcher.
 - Bridge crew keep their seats after quit and reload.
-- Weapon fire no longer dropped in multiplayer.
 
 ### Performance
 - Multithreading: 0, 1 or 2 helpers, picked for your CPU.
@@ -93,6 +92,11 @@ Grab the latest from **[Releases](../../releases/latest)** (patch zip + What's N
 - Loading screen with a progress bar that learns load times. Use your own picture if you like.
 - Orion Delta RC4.1: Theme Selector, mutators and Wave Defense show up.
 
+### Multiplayer
+- New LCARS Multiplayer screen: Internet, LAN and Direct Connect on one page.
+- Passworded games show a padlock, and only ask for a password when they need one.
+- Weapon fire no longer dropped in multiplayer and co-op.
+
 ### Co-op (beta)
 - Host and join from our LCARS screen, not the stock MP screens.
 - Lobby with seats (crew, AI or closed). Host engages when ready.
@@ -125,7 +129,7 @@ Grab the latest from **[Releases](../../releases/latest)** (patch zip + What's N
 - **PlanetFX.** New planets, coming to the game.
 - **Planet landings.** Early work, built on texture streaming.
 - **Texture streaming.** Big textures loaded as needed, so heavy mods and HD packs fit.
-- **Network upgrades.** Auto port opening, steadier online play. Started.
+- **Network upgrades.** Automatic port opening so hosting just works, a warning when your port is closed, the host sending missing files to players, and steadier online play in general. Started.
 - **Co-op campaign.** The story missions, together.
 - **Bridge co-op for roleplay groups.** Helm, Tactical, Science, Engineering, captain gives the orders.
 - **Mission scripter.** Ships, objectives, hails and story beats for your own crew.
@@ -138,7 +142,7 @@ Grab the latest from **[Releases](../../releases/latest)** (patch zip + What's N
 
 ## Thanks
 
-**Code it's built on:** **AlphaYellow** (FOV patch sites from their MIT-licensed FOV fix), **elishacloud** (dxwrapper, zlib), **DXVK** by Philip Rebohle and contributors (zlib).
+**Third-party parts.** Each covers one piece, and everything else is our own exe fixes and code: **AlphaYellow** (the FOV patch sites, from their MIT-licensed FOV fix), **elishacloud** (dxwrapper, zlib, the DX7 to DX9 step), **DXVK** by Philip Rebohle and contributors (zlib, optional Vulkan).
 
 **VonFrank.** He won't say it, so I will. He spent years on Bridge Commander: Remastered for the community and for new players. Back then BC was a crashing, buggy mess whatever mod you ran, and Remastered finally made it stable. Because of him new players came, YouTubers took an interest, and new modders, ships and ideas followed. Thanks too for all the advice and ideas on this patch.
 
