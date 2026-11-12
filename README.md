@@ -14,6 +14,9 @@ An unofficial fan patch for **Star Trek: Bridge Commander**. One patched `stbc.e
 
 I've tinkered with BC since not long after it came out, mostly just for myself, hacking `Effects.py` and lurking. Discord got me involved, the serious work started in 2023, and Claude and Codex have helped along the way. This is the first time I've really shared any of it.
 
+> [!WARNING]
+> **THERE WILL BE BUGS.** This is a big refit of a 24-year-old engine, so things will break. When they do, please report them in **[Issues](https://github.com/aciddesign/STBC-Remastered-Patch/issues)** (logs help a lot, see [Problems](#problems)) or message me on Discord.
+
 ## Download
 
 Grab the latest from **[Releases](../../releases/latest)** (patch zip + What's New). No game files here, you need your own copy.
