@@ -181,7 +181,7 @@ More is already planned, and no doubt we'll find more as we go. The aim is to ge
 
 **BC community:** **Denacity** (Orion Delta, Bedrock, the coloured ammo idea, and advice), **Michael Wiley** (for his advice, and the cutscene work in progress), **Cuddly** (the 64-voice tip), **Nocturnal**, **Morgan** (some Windows testing), **Tethys** (for getting me started on Ghidra and exe exploration, about 3 years ago), and everyone who tested, sent logs and put up with broken builds.
 
-**The Morrowind modding community:** MGE XE, Greatness7's 64-bit helper work and OpenMW showed what an old engine can do. Our Memory Helper follows the same idea.
+**The Morrowind modding community:** MGE XE, Greatness7's 64-bit helper work and OpenMW showed what an old engine can do, and they shared it openly. OpenMW alone has been built in the open since 2008, nearly 20 years of work, and MGE XE is open source too. Our Memory Helper follows the same idea.
 
 ## Install
 
