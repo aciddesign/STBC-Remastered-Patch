@@ -137,6 +137,7 @@ This repo holds releases only. It contains no game files, so you need your own c
 - **CameraNX.** Cinematic cameras that frame the battle like a space shot from the show.
 - **VR.** The captain's chair, on the bridge.
 - **The LCARS app.** One app to install, update and manage the patch and its add-ons.
+- **An optional mod pack.** Extras that sit outside the core patch, such as sound upgrades, for players who want them.
 - And a lot more.
 
 ## Thanks
