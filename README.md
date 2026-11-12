@@ -51,7 +51,7 @@ Full details, every off switch and what's been tested are in the README inside t
 - Borderless windowed, big resolutions no longer greyed out.
 - VSync option, fullscreen and windowed.
 - 24-bit depth buffer, far less surface flicker.
-- Menu videos fall back to the largest that fits. Bink made crash-safe in memory, with its own thread-safe heap.
+- Menu videos fall back to the largest that fits. Bink made crash-safe in memory.
 - Reworked fullscreen video: the 1080 intro, logo, credits and end movies play cleanly.
 - New Skip Intro Video menu option (General, and the LCARS Display page): turn it on and the opening movies are skipped every launch. Off by default.
 - Faster windowed mode and loading screens.
@@ -110,7 +110,6 @@ Full details, every off switch and what's been tested are in the README inside t
 
 ### Sound
 - High Quality: 64 voices, Full HRTF, 44.1 kHz.
-- The game's hidden High Quality Software sound mode, unlocked in Sound Quality.
 - *More to come.*
 
 
@@ -155,9 +154,6 @@ Full details, every off switch and what's been tested are in the README inside t
 - Finds wrappers that crash the game (dgVoodoo, ReShade) and compatibility mode, offers to move them aside.
 - One log switch, logs per channel, crash log, last 5 runs kept.
 - Optional 4 GB (Large Address Aware) flag.
-- Startup report in the log: Windows or Wine version, 4 GB flag, wrapper, every loaded DLL, free address space. Python errors are logged in full.
-- CLEAN-LOGS clears old logs when you're done.
-- Exe version info and credits in the file's Properties.
 - *More to come.*
 
 ### The patcher
@@ -167,7 +163,6 @@ Full details, every off switch and what's been tested are in the README inside t
 - Every exe change checked against the stock bytes first. Nothing applied blind.
 - Script fixes only go over stock files. A mod's own version is left alone.
 - Checks for Vulkan first, and leaves DXVK out with a warning if your PC can't run it (no black screen).
-- On Linux, `patch.sh` fetches its own private PowerShell, so there's nothing to install.
 - It talks like the Enterprise computer: "Working.", "Please confirm.", "Unable to comply.", "Program complete."
 
 ## What's to come
