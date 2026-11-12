@@ -51,7 +51,7 @@ Full details, every off switch and what's been tested are in the README inside t
 - Borderless windowed, big resolutions no longer greyed out.
 - VSync option, fullscreen and windowed.
 - 24-bit depth buffer, far less surface flicker.
-- Menu videos fall back to the largest that fits. Bink made crash-safe in memory.
+- Menu videos fall back to the largest that fits. Bink made crash-safe in memory, with its own thread-safe heap.
 - Reworked fullscreen video: the 1080 intro, logo, credits and end movies play cleanly.
 - New Skip Intro Video menu option (General, and the LCARS Display page): turn it on and the opening movies are skipped every launch. Off by default.
 - Faster windowed mode and loading screens.
@@ -65,6 +65,8 @@ Full details, every off switch and what's been tested are in the README inside t
 - Mouse wheel scrolls every menu list.
 - Separate mouse speed and FOV for Tactical and Bridge.
 - Bridge camera shake away from the hit side, with a switch and strength slider.
+- The Esc menu cursor keeps its spot.
+- Mouse wheel sets ship speed outside menus.
 - *More to come.*
 
 
@@ -101,11 +103,14 @@ Full details, every off switch and what's been tested are in the README inside t
 - DXVK (Vulkan) set up automatically when supported.
 - Effects never draw over menus or the HUD.
 - Performance Overlay in four sizes, with Memory Helper rows.
+- Ship glow maps work with Per-Pixel Lighting.
+- Under DXVK: 1 queued frame for lower input lag, and 16x anisotropic filtering for sharper textures.
 - *More to come.*
 
 
 ### Sound
 - High Quality: 64 voices, Full HRTF, 44.1 kHz.
+- The game's hidden High Quality Software sound mode, unlocked in Sound Quality.
 - *More to come.*
 
 
@@ -120,6 +125,7 @@ Full details, every off switch and what's been tested are in the README inside t
 - Startup Sequence ("incoming transmission") and Shutdown Sequence (powers down piece by piece).
 - Loading screen with a progress bar that learns load times. Use your own picture if you like.
 - Orion Delta RC4.1: Theme Selector, mutators and Wave Defense show up.
+- Configure > Display rebuilt: windowed/fullscreen switch and dropdowns, in game.
 - *More to come.*
 
 
@@ -149,6 +155,9 @@ Full details, every off switch and what's been tested are in the README inside t
 - Finds wrappers that crash the game (dgVoodoo, ReShade) and compatibility mode, offers to move them aside.
 - One log switch, logs per channel, crash log, last 5 runs kept.
 - Optional 4 GB (Large Address Aware) flag.
+- Startup report in the log: Windows or Wine version, 4 GB flag, wrapper, every loaded DLL, free address space. Python errors are logged in full.
+- CLEAN-LOGS clears old logs when you're done.
+- Exe version info and credits in the file's Properties.
 - *More to come.*
 
 ### The patcher
@@ -156,6 +165,10 @@ Full details, every off switch and what's been tested are in the README inside t
 - Backs up what it changes. Undo restores only its own backups and puts everything back.
 - Writes a receipt of what it installed.
 - Every exe change checked against the stock bytes first. Nothing applied blind.
+- Script fixes only go over stock files. A mod's own version is left alone.
+- Checks for Vulkan first, and leaves DXVK out with a warning if your PC can't run it (no black screen).
+- On Linux, `patch.sh` fetches its own private PowerShell, so there's nothing to install.
+- It talks like the Enterprise computer: "Working.", "Please confirm.", "Unable to comply.", "Program complete."
 
 ## What's to come
 
@@ -183,7 +196,7 @@ More is already planned, and no doubt we'll find more as we go. The aim is to ge
 
 ## Thanks
 
-**Third-party parts.** Each covers one piece, and everything else is our own exe fixes and code: **AlphaYellow** (the FOV patch sites, from their MIT-licensed FOV fix), **elishacloud** (dxwrapper, zlib, the DX7 to DX9 step), **DXVK** by Philip Rebohle and contributors (zlib, optional Vulkan).
+**Third-party parts.** Each covers one piece, and everything else is our own exe fixes and code: **AlphaYellow** (the FOV patch sites, from their MIT-licensed FOV fix), **elishacloud** (dxwrapper, zlib, the DX7 to DX9 step), **Antonio** font by Vernon Adams (SIL Open Font License, for the LCARS text), **DXVK** by Philip Rebohle and contributors (zlib, optional Vulkan).
 
 **VonFrank.** He won't say it, so I will. He spent years on Bridge Commander: Remastered for the community and for new players. Back then BC was a crashing, buggy mess whatever mod you ran, and Remastered finally made it stable. Because of him new players came, YouTubers took an interest, and new modders, ships and ideas followed. People had ideas and talked a lot, but a domino had missed and everything stalled, leaving just talk and dead projects. He flicked the next one, and many of the engine-level projects going on now, this one included, follow from that. Thanks too for all the advice and ideas on this patch, and for pushing the weapons work: torpedoes, phasers and tractors, systems I'd never dug into. It's the least he deserves.
 
@@ -195,8 +208,14 @@ More is already planned, and no doubt we'll find more as we go. The aim is to ge
 
 **Nocturnal.** Keep an eye on his Unreal Engine project too (link coming soon).
 
+**Also:** **Michael Okuda**, whose LCARS design language the screens follow. **goinyk** for the loading screen picture (Envato Elements, licensed). And the tools that made the exe work possible: **Ghidra** and **pycdc**.
+
 **The Morrowind modding community:** MGE XE, Greatness7's 64-bit helper work and OpenMW showed what an old engine can do, and they shared it openly. OpenMW alone has been built in the open since 2008, nearly 20 years of work, and MGE XE is open source too. Our Memory Helper follows the same idea.
 
 ## Problems
 
 Run `COLLECT-LOGS.bat` (Linux: `./patch.sh logs`), then send the zip it makes with a short note on what happened. Open an issue in **[Issues](../../issues)** here, or message me on Discord.
+
+---
+
+<sub>Star Trek: Bridge Commander was made by Totally Games and published by Activision. Star Trek belongs to CBS Studios / Paramount. This is a fan project and isn't made or endorsed by any of them.</sub>
