@@ -199,4 +199,4 @@ More is already planned, and no doubt we'll find more as we go. The aim is to ge
 
 ## Problems
 
-Run `COLLECT-LOGS.bat` (Linux: `./patch.sh logs`) and send the zip it makes.
+Run `COLLECT-LOGS.bat` (Linux: `./patch.sh logs`), then send the zip it makes with a short note on what happened. Open an issue in **[Issues](../../issues)** here, or message me on Discord.
