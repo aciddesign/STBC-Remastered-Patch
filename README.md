@@ -163,7 +163,7 @@ More is already planned, and no doubt we'll find more as we go. The aim is to ge
 
 - **Volumetric effects.** Explosions, shockwaves, fires and warp with real depth. Next up. It was close to finished and should have been in this release, but lost backups and a bug set it back.
 - **Download ships in game.** Browse and install from inside BC.
-- **New hull damage.** Real depth on the ships. Masking is ready.
+- **Ship damage.** Hull damage with real depth on the ships. In development for a while now, with its own demo tool, and the masking of the right areas is already done. It ships when it meets our quality bar.
 - **New suns.** Stars that behave like stars, novas included.
 - **PlanetFX.** New planets, coming to the game.
 - **Texture streaming.** Big textures loaded as needed, so heavy mods and HD packs fit.
