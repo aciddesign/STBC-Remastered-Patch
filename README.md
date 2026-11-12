@@ -176,6 +176,7 @@ More is already planned, and no doubt we'll find more as we go. The aim is to ge
 - **PlanetFX.** New planets, coming to the game.
 - **Texture streaming.** Big textures loaded as needed, so heavy mods and HD packs fit.
 - **Planet landings.** In research, with texture streaming as the groundwork.
+- **New loading screens.** Bigger plans for these. Then again, with texture streaming, who needs loading screens? 😉
 - **Network upgrades.** Automatic port opening so hosting just works, a warning when your port is closed, the host sending missing files to players, and steadier online play in general. Started.
 - **Co-op campaign.** The story missions, together.
 - **More co-op on the bridge.** Crew at their stations, synced head-look and arm movement. Parked for now while the core features come first.
@@ -203,7 +204,7 @@ More is already planned, and no doubt we'll find more as we go. The aim is to ge
 
 **Nocturnal.** Keep an eye on his Unreal Engine project too (link coming soon).
 
-**Also:** **Michael Okuda**, whose LCARS design language the screens follow. **goinyk** for the loading screen picture (Envato Elements, licensed). And the tools that made the exe work possible: **Ghidra** and **pycdc**.
+**Also:** **Michael Okuda**, whose LCARS design language the screens follow. And the tools that made the exe work possible: **Ghidra** and **pycdc**.
 
 **The Morrowind modding community:** MGE XE, Greatness7's 64-bit helper work and OpenMW showed what an old engine can do, and they shared it openly. OpenMW alone has been built in the open since 2008, nearly 20 years of work, and MGE XE is open source too. Our Memory Helper follows the same idea.
 
