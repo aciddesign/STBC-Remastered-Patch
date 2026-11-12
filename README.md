@@ -142,7 +142,7 @@ Grab the latest from **[Releases](../../releases/latest)** (patch zip + What's N
 
 **VonFrank.** He won't say it, so I will. He spent years on Bridge Commander: Remastered for the community and for new players. Back then BC was a crashing, buggy mess whatever mod you ran, and Remastered finally made it stable. Because of him new players came, YouTubers took an interest, and new modders, ships and ideas followed. Thanks too for all the advice and ideas on this patch.
 
-**Whiskers.** For letting me go on and on at him with ideas this last week or so. I stepped away from Discord and the scene for 3 years and came back bottled up with things to talk about, and he and VonFrank took the brunt of it. Sound advice, and Windows and co-op testing too.
+**Whiskers.** For letting me go on and on at him with ideas this last week or so. I stepped away from Discord and the scene for 3 years and came back bottled up with things to talk about, and he and VonFrank took the brunt of it. Sound advice, and Windows and co-op testing too. <sub>(Riker clone to be sent when technology permits.)</sub>
 
 **BC community:** **Denacity** (Bedrock, and a bit of advice), **Orion** (Orion Delta), **Michael Wiley** (for his advice, and the cutscene work in progress), **Cuddly** (the 64-voice tip), **Nocturnal**, **Tethys**, and everyone who tested, sent logs and put up with broken builds.
 
