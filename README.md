@@ -35,7 +35,7 @@ Grab the latest from **[Releases](../../releases/latest)** (patch zip + What's N
 ### Display and video
 - Widescreen resolutions up to 3840x2160 (sizes your display reports).
 - HUD, LCARS, fonts and weapon markers fit any resolution, even after changing it in game.
-- Hor+ FOV built into the exe, from AlphaYellow's FOV fix.
+- Hor+ FOV built into the exe. Our own code, hooked in at the camera sites found in AlphaYellow's FOV fix.
 - Real graphics card name shown, z-buffer on for every card.
 - Borderless windowed, big resolutions no longer greyed out.
 - VSync option, fullscreen and windowed.
@@ -138,7 +138,7 @@ Grab the latest from **[Releases](../../releases/latest)** (patch zip + What's N
 
 ## Thanks
 
-**Code it's built on:** **AlphaYellow** (widescreen FOV fix, MIT), **elishacloud** (dxwrapper, zlib), **DXVK** by Philip Rebohle and contributors (zlib).
+**Code it's built on:** **AlphaYellow** (FOV patch sites from their MIT-licensed FOV fix), **elishacloud** (dxwrapper, zlib), **DXVK** by Philip Rebohle and contributors (zlib).
 
 **BC community:** **VonFrank** (Bridge Commander: Remastered), **Denacity** (Bedrock), **Orion** (Orion Delta), **Michael Wiley** (the Dauntless and his ships), **Whiskers** (Windows and co-op testing), **Cuddly** (the 64-voice tip), **Nocturnal**, **Tethys**, and everyone who tested, sent logs and put up with broken builds.
 
