@@ -153,7 +153,7 @@ Grab the latest from **[Releases](../../releases/latest)** (patch zip + What's N
 
 **Whiskers.** For letting me go on and on at him with ideas this last week or so. I stepped away from Discord and the scene for 3 years and came back bottled up with things to talk about, and he and VonFrank took the brunt of it. Sound advice, and Windows and co-op testing too. <sub>(Riker clone to be sent when technology permits.)</sub>
 
-**BC community:** **Denacity** (Bedrock, and advice), **Orion** (Orion Delta), **Michael Wiley** (for his advice, and the cutscene work in progress), **Cuddly** (the 64-voice tip), **Nocturnal**, **Tethys**, and everyone who tested, sent logs and put up with broken builds.
+**BC community:** **Denacity** (Orion Delta, Bedrock, and advice), **Michael Wiley** (for his advice, and the cutscene work in progress), **Cuddly** (the 64-voice tip), **Nocturnal**, **Tethys**, and everyone who tested, sent logs and put up with broken builds.
 
 **The Morrowind modding community:** MGE XE, Greatness7's 64-bit helper work and OpenMW showed what an old engine can do. Our Memory Helper follows the same idea.
 
