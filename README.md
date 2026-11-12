@@ -18,6 +18,16 @@ I've tinkered with BC since not long after it came out, mostly just for myself, 
 
 Grab the latest from **[Releases](../../releases/latest)** (patch zip + What's New). No game files here, you need your own copy.
 
+## Install
+
+1. Unzip the patch, easiest inside the game folder next to `stbc.exe` (it asks if it can't find it).
+2. Windows 10/11: run `PATCH.bat`. Nothing else to install. If Windows blocks it: right-click the zip, Properties, tick Unblock, unzip again.
+3. Linux (Steam/Proton, Lutris, Wine): run `./patch.sh`.
+   Tested on, and works best with, **Proton-CachyOS** (SLR build `proton-cachyos-slr-20261005`).
+4. Remove: `UNDO.bat` (Linux: `./patch.sh undo`).
+
+Full details, every off switch and what's been tested are in the README inside the zip.
+
 ## Highlights
 
 - **Widescreen done right, in the exe.** Real widescreen resolutions, Hor+ FOV, HUD and fonts sized to your screen. No plugin needed. 4:3 unchanged.
@@ -182,16 +192,6 @@ More is already planned, and no doubt we'll find more as we go. The aim is to ge
 **BC community:** **Denacity** (Orion Delta, Bedrock, the coloured ammo idea, and advice), **Michael Wiley** (advice) <sub>(and his ship in the cutscene, if the final work meets his quality standards 😉)</sub>, **Cuddly** (the 64-voice tip), **Nocturnal**, **Morgan** (some Windows testing), **Tethys** (for getting me started on Ghidra and exe exploration, about 3 years ago), and everyone who tested, sent logs and put up with broken builds.
 
 **The Morrowind modding community:** MGE XE, Greatness7's 64-bit helper work and OpenMW showed what an old engine can do, and they shared it openly. OpenMW alone has been built in the open since 2008, nearly 20 years of work, and MGE XE is open source too. Our Memory Helper follows the same idea.
-
-## Install
-
-1. Unzip the patch, easiest inside the game folder next to `stbc.exe` (it asks if it can't find it).
-2. Windows 10/11: run `PATCH.bat`. Nothing else to install. If Windows blocks it: right-click the zip, Properties, tick Unblock, unzip again.
-3. Linux (Steam/Proton, Lutris, Wine): run `./patch.sh`.
-   Tested on, and works best with, **Proton-CachyOS** (SLR build `proton-cachyos-slr-20261005`).
-4. Remove: `UNDO.bat` (Linux: `./patch.sh undo`).
-
-Full details, every off switch and what's been tested are in the README inside the zip.
 
 ## Problems
 
