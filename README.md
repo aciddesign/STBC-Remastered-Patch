@@ -2,8 +2,6 @@
 
 An unofficial fan patch for **Star Trek: Bridge Commander** (2002). One patched `stbc.exe` fixes and modernises the game, and a graphics layer comes with it. No game or mod script is replaced: the changes run in memory, from the exe and a few new script files. It works on the stock 1.1 game (CD, no-CD or GOG exe), with or without the 4 GB patch, and with mods that keep the stock scripts in place.
 
-By Acid Twin, with Claude (Anthropic) and Codex (OpenAI).
-
 This started as years of slow solo work on a game I love. Over the last few weeks, working with Claude and Codex on the game's own exe, it has moved faster than ever, and there's a lot more on the way.
 
 ## Download
