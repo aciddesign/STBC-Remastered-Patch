@@ -21,7 +21,7 @@ Grab the latest from **[Releases](../../releases/latest)** (patch zip + What's N
 ## Highlights
 
 - **Widescreen done right, in the exe.** Real widescreen resolutions, Hor+ FOV, HUD and fonts sized to your screen. No plugin needed. 4:3 unchanged.
-- **Two torpedo systems.** Ships with two torpedo types fire them separately: second torpedo panel, X fires the second system. Single player, co-op and multiplayer.
+- **Two torpedo systems.** Ships with two torpedo types fire them separately: second torpedo panel with coloured ammo (Denacity's idea), X fires the second system. Single player, co-op and multiplayer.
 - **64-bit Memory Helper.** BC is 32-bit, so everything has to fit in 4 GB and big mods and HD textures run out of room. `bchost.exe` is a separate 64-bit helper that holds big data outside the game's 4 GB and hands it back when needed. Up to 2 GB by default, 3.27 GB held in testing on real Windows. Normal visible file, nothing hidden or packed. If it's missing or stops, the game carries on. On/off in Configure, usage on the Performance Overlay.
 - **Multithreading.** Spare CPU cores handle ship proximity and hull damage. No more multi-second freezes: worst freeze in our 81-ship test went from 6 s to 0.04 s.
 - **Preload Extended.** Big effect and ship textures load during the loading screen, so the first explosion doesn't stutter.
@@ -179,7 +179,7 @@ More is already planned, and no doubt we'll find more as we go. The aim is to ge
 
 **Whiskers.** For letting me go on and on at him with ideas this last week or so. I stepped away from Discord and the scene for 3 years and came back bottled up with things to talk about, and he and VonFrank took the brunt of it. Sound advice, and Windows and co-op testing too. <sub>(Riker clone to be sent when technology permits.)</sub>
 
-**BC community:** **Denacity** (Orion Delta, Bedrock, and advice), **Michael Wiley** (for his advice, and the cutscene work in progress), **Cuddly** (the 64-voice tip), **Nocturnal**, **Morgan** (some Windows testing), **Tethys** (for getting me started on Ghidra and exe exploration, about 3 years ago), and everyone who tested, sent logs and put up with broken builds.
+**BC community:** **Denacity** (Orion Delta, Bedrock, the coloured ammo idea, and advice), **Michael Wiley** (for his advice, and the cutscene work in progress), **Cuddly** (the 64-voice tip), **Nocturnal**, **Morgan** (some Windows testing), **Tethys** (for getting me started on Ghidra and exe exploration, about 3 years ago), and everyone who tested, sent logs and put up with broken builds.
 
 **The Morrowind modding community:** MGE XE, Greatness7's 64-bit helper work and OpenMW showed what an old engine can do. Our Memory Helper follows the same idea.
 
