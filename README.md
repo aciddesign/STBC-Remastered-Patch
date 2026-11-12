@@ -161,6 +161,7 @@ Grab the latest from **[Releases](../../releases/latest)** (patch zip + What's N
 1. Unzip the patch, easiest inside the game folder next to `stbc.exe` (it asks if it can't find it).
 2. Windows 10/11: run `PATCH.bat`. Nothing else to install. If Windows blocks it: right-click the zip, Properties, tick Unblock, unzip again.
 3. Linux (Steam/Proton, Lutris, Wine): run `./patch.sh`.
+   Tested on, and works best with, **Proton-CachyOS** (SLR build `proton-cachyos-slr-20261005`).
 4. Remove: `UNDO.bat` (Linux: `./patch.sh undo`).
 
 Full details, every off switch and what's been tested are in the README inside the zip.
