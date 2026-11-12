@@ -13,6 +13,7 @@ This repo holds releases only. It contains no game files, so you need your own c
 ## Highlights
 
 - **Two torpedo systems.** Ships that carry two kinds of torpedo can now fire them separately. A second torpedo panel shows each system's tubes and reloads, and the X key fires the second system. It works in single player, co-op and multiplayer.
+- **64-bit Memory Helper.** Bridge Commander is a 32-bit game, so everything it loads has to fit in 4 GB of address space, and big mods and HD textures run out of room. The patch adds a separate 64-bit helper program, `bchost.exe`, that holds big data outside the game's 4 GB and hands it back when the game needs it. By default it holds up to 2 GB of your PC's RAM, and on real Windows it has held 3.27 GB in testing. It's a normal visible file next to the game, nothing hidden or packed. If it's missing or stops, the game carries on without it. You can turn it on or off in Configure, and the Performance Overlay shows how much it holds.
 - **Multithreading.** The game now uses spare CPU cores for two heavy jobs: sorting which ships are near each other, and working out hull damage from hits. Big battles no longer freeze for seconds at a time. In our 81-ship test, the worst freeze dropped from 6 seconds to 0.04 seconds.
 - **Preload Extended.** Big effect and ship textures go to the graphics card during the loading screen, so the first explosion or weapon hit no longer stutters.
 - **Co-op (beta).** Play together on one mission. The crew joins the lobby and picks their seats before the host engages. You see each other's targets, and the crew seat gets the bridge view.
@@ -58,7 +59,7 @@ This repo holds releases only. It contains no game files, so you need your own c
 - Big battles stay faster for longer: explosions and hit effects reuse their old slots instead of piling up. Late in a long fight that is about 5% more FPS on average, and more near the end.
 - Texture compression, with the DDS files made by the exe on first launch.
 - Textures leave the graphics card when you leave a mission.
-- A memory helper: a 64-bit helper program that the game can move big data to when its 4 GB space gets tight. Its settings are in Configure.
+- 64-bit Memory Helper (see Highlights).
 
 ### Graphics
 - SGSSAA anti-aliasing.
