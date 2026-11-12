@@ -40,7 +40,7 @@ Full details, every off switch and what's been tested are in the README inside t
 - **Widescreen done right, in the exe.** Real widescreen resolutions, Hor+ FOV, HUD and fonts sized to your screen. No plugin needed. 4:3 unchanged.
 - **Preload Extended.** Big effect and ship textures load during the loading screen, so the first explosion doesn't stutter.
 - **New LCARS screens.** Configure, Quick Battle with 3D ship preview, New Game, Load Game, Multiplayer, quit dialog, loading screen, Startup and Shutdown Sequences.
-- **Modern graphics.** SGSSAA, bloom, HDR, per-pixel lighting, ship shadows, colour grading, GPU ship highlights. Every effect has its own switch.
+- **Graphics options.** Optional SGSSAA (supersampling anti-aliasing), bloom, HDR, per-pixel lighting, ship shadows, colour grading, GPU ship highlights. Every effect has its own switch.
 - **Texture compression.** Compressed DDS textures: video memory 5.5 GB down to 3.4 GB in our tests.
 - **Performance Overlay.** FPS, frame times, every CPU core, GPU, memory and address space.
 
@@ -100,7 +100,7 @@ Full details, every off switch and what's been tested are in the README inside t
 
 
 ### Graphics
-- SGSSAA anti-aliasing.
+- SGSSAA anti-aliasing, off by default. Smooths the 3D scene only, menus untouched. Heavy on the GPU. Tested on NVIDIA and Intel, AMD not tested yet.
 - Switchable effects: Glow Bloom, HDR Scene (FP16), Glow Shimmer Fix, Per-Pixel Lighting, Deband, Rim Light, Ship Shadows, Colour Grade, Planet Glow, Heat Ripple.
 - GPU ship highlights (~7.5% faster).
 - DXVK (Vulkan) set up automatically when supported.
