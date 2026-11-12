@@ -42,7 +42,8 @@ Grab the latest from **[Releases](../../releases/latest)** (patch zip + What's N
 - VSync option, fullscreen and windowed.
 - 24-bit depth buffer, far less surface flicker.
 - Menu videos fall back to the largest that fits. Bink made crash-safe in memory.
-- 1080 intro, logo, credits and end movies play cleanly fullscreen. Skip Intro option.
+- Reworked fullscreen video: the 1080 intro, logo, credits and end movies play cleanly.
+- New Skip Intro Video menu option (General, and the LCARS Display page): turn it on and the opening movies are skipped every launch. Off by default.
 - Faster windowed mode and loading screens.
 - Smooth motion even after days of uptime (no UptimeFaker needed).
 
