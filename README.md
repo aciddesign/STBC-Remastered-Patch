@@ -7,167 +7,149 @@
 [![Game: Star Trek Bridge Commander](https://img.shields.io/badge/game-Star%20Trek%3A%20Bridge%20Commander%20(2002)-blue)](#)
 [![Works on stock 1.1, GOG, Remastered 2.0, Orion Delta, Legacy 1.0, Kobayashi Maru and more](https://img.shields.io/badge/works%20on-stock%201.1%20%7C%20GOG%20%7C%20Remastered%202.0%20%7C%20Orion%20Delta%20%7C%20Legacy%201.0%20%7C%20Kobayashi%20Maru%20%7C%20and%20more-blue)](#)
 
-An unofficial fan patch for **Star Trek: Bridge Commander** (2002). One patched `stbc.exe` fixes and modernises the game, and a graphics layer comes with it. No game or mod script is replaced: the changes run in memory, from the exe and a few new script files. It works on the stock 1.1 game (CD, no-CD or GOG exe), with or without the 4 GB patch, and with mods that keep the stock scripts in place: Remastered 2.0, Remastered Orion (Orion Delta), Legacy 1.0, Kobayashi Maru and many more.
+An unofficial fan patch for **Star Trek: Bridge Commander**. One patched `stbc.exe` plus a graphics layer. No game or mod script is replaced, everything runs in memory. Works on stock 1.1 (CD, no-CD, GOG), with or without the 4 GB patch, and on mods that keep the stock scripts: Remastered 2.0, Remastered Orion (Orion Delta), Legacy 1.0, Kobayashi Maru and many more.
 
-I've been tinkering with this game since not long after it came out in 2002. It started with hacking `Effects.py`, and my first camera work lived in there too, long before it had a name. For most of those years it was all just for me. I mostly lurked, apart from now and then trying to push my Effects file on people. Discord got me properly involved, and the serious work began in 2023 with my first video, with Claude and Codex helping along the way. This is the first time I've really shared any of it. Recently, a much deeper understanding of the game's own exe has sped it up more than ever, and there's a lot more on the way.
+I've tinkered with BC since not long after it came out, mostly just for myself, hacking `Effects.py` and lurking. Discord got me involved, the serious work started in 2023, and Claude and Codex have helped along the way. This is the first time I've really shared any of it.
 
 ## Download
 
-Get the latest version from **[Releases](../../releases/latest)**. Each release has the patch zip and its What's New.
-
-This repo holds releases only. It contains no game files, so you need your own copy of Bridge Commander.
+Grab the latest from **[Releases](../../releases/latest)** (patch zip + What's New). No game files here, you need your own copy.
 
 ## Highlights
 
-- **Widescreen done right, inside the exe.** Real widescreen resolutions, Hor+ field of view, and a HUD and fonts sized for your screen, all built into `stbc.exe`. No extra plugin needed. 4:3 looks exactly as before.
-- **Two torpedo systems.** Ships that carry two kinds of torpedo can now fire them separately. A second torpedo panel shows each system's tubes and reloads, and the X key fires the second system. It works in single player, co-op and multiplayer.
-- **64-bit Memory Helper.** Bridge Commander is a 32-bit game, so everything it loads has to fit in 4 GB of address space, and big mods and HD textures run out of room. The patch adds a separate 64-bit helper program, `bchost.exe`, that holds big data outside the game's 4 GB and hands it back when the game needs it. By default it holds up to 2 GB of your PC's RAM, and on real Windows it has held 3.27 GB in testing. It's a normal visible file next to the game, nothing hidden or packed. If it's missing or stops, the game carries on without it. You can turn it on or off in Configure, and the Performance Overlay shows how much it holds.
-- **Multithreading.** The game now uses spare CPU cores for two heavy jobs: sorting which ships are near each other, and working out hull damage from hits. Big battles no longer freeze for seconds at a time. In our 81-ship test, the worst freeze dropped from 6 seconds to 0.04 seconds.
-- **Preload Extended.** Big effect and ship textures go to the graphics card during the loading screen, so the first explosion or weapon hit no longer stutters.
-- **Co-op (beta).** Play together on one mission. The crew joins the lobby and picks their seats before the host engages. You see each other's targets, and the crew seat gets the bridge view.
-- **New LCARS screens.** Configure, Quick Battle with a 3D ship preview, New Game, Load Game, Multiplayer, the quit dialog, a loading screen with a progress bar, and Startup and Shutdown Sequences.
-- **Modern graphics.** SGSSAA anti-aliasing, bloom, HDR, per-pixel lighting, ship shadows, colour grading, modern ship highlights on the GPU, and more. Every effect has its own switch.
-- **Texture compression.** Textures load from compressed DDS, so they use far less video memory (5.5 GB down to 3.4 GB in our tests).
-- **Performance Overlay.** FPS, frame times, every CPU core, the GPU, and the game's memory and address space.
+- **Widescreen done right, in the exe.** Real widescreen resolutions, Hor+ FOV, HUD and fonts sized to your screen. No plugin needed. 4:3 unchanged.
+- **Two torpedo systems.** Ships with two torpedo types fire them separately: second torpedo panel, X fires the second system. Single player, co-op and multiplayer.
+- **64-bit Memory Helper.** BC is 32-bit, so everything has to fit in 4 GB and big mods and HD textures run out of room. `bchost.exe` is a separate 64-bit helper that holds big data outside the game's 4 GB and hands it back when needed. Up to 2 GB by default, 3.27 GB held in testing on real Windows. Normal visible file, nothing hidden or packed. If it's missing or stops, the game carries on. On/off in Configure, usage on the Performance Overlay.
+- **Multithreading.** Spare CPU cores handle ship proximity and hull damage. No more multi-second freezes: worst freeze in our 81-ship test went from 6 s to 0.04 s.
+- **Preload Extended.** Big effect and ship textures load during the loading screen, so the first explosion doesn't stutter.
+- **Co-op (beta).** Play one mission together. Crew picks seats in the lobby, shared targets, bridge view for crew.
+- **New LCARS screens.** Configure, Quick Battle with 3D ship preview, New Game, Load Game, Multiplayer, quit dialog, loading screen, Startup and Shutdown Sequences.
+- **Modern graphics.** SGSSAA, bloom, HDR, per-pixel lighting, ship shadows, colour grading, GPU ship highlights. Every effect has its own switch.
+- **Texture compression.** Compressed DDS textures: video memory 5.5 GB down to 3.4 GB in our tests.
+- **Performance Overlay.** FPS, frame times, every CPU core, GPU, memory and address space.
 
 ## Everything the patch does
 
 ### Display and video
-- Widescreen resolutions up to 3840x2160 in the game's own list (only sizes your display reports).
-- The HUD, LCARS panels, fonts and weapon markers fit your screen at any resolution, including after a change in game.
-- Widescreen field of view (Hor+), built into the exe from AlphaYellow's FOV fix. 4:3 looks exactly as before.
-- Your real graphics card name is shown, and the z-buffer is on for every card.
-- Borderless windowed mode, with big resolutions no longer greyed out.
-- A VSync option, fullscreen and windowed.
-- A 24-bit depth buffer, so far less flicker where surfaces meet.
-- Menu videos fall back to the largest one that fits, and the Bink video DLL is made crash-safe in memory.
-- The 1080 intro, logo, credits and end-game movies play cleanly in fullscreen.
-- Skip Intro Video option.
-- Faster windowed mode and loading screens: the picture stays on the graphics card.
-- Smooth motion even after the PC has been on for days (no UptimeFaker needed).
+- Widescreen resolutions up to 3840x2160 (sizes your display reports).
+- HUD, LCARS, fonts and weapon markers fit any resolution, even after changing it in game.
+- Hor+ FOV built into the exe, from AlphaYellow's FOV fix.
+- Real graphics card name shown, z-buffer on for every card.
+- Borderless windowed, big resolutions no longer greyed out.
+- VSync option, fullscreen and windowed.
+- 24-bit depth buffer, far less surface flicker.
+- Menu videos fall back to the largest that fits. Bink made crash-safe in memory.
+- 1080 intro, logo, credits and end movies play cleanly fullscreen. Skip Intro option.
+- Faster windowed mode and loading screens.
+- Smooth motion even after days of uptime (no UptimeFaker needed).
 
 ### Controls
-- The mouse moves 1:1, with no camera over-rotation and no lost slow movements.
-- Bridge head-look follows the mouse 1:1 (stock was about 7x too fast).
-- The mouse wheel scrolls menu lists everywhere.
-- Separate mouse speed and field of view for Tactical and the Bridge, applied at once.
-- Bridge camera shake jolts away from the side that was hit, then settles. A switch and a strength slider control it.
+- 1:1 mouse, no over-rotation, no lost slow movements.
+- Bridge head-look 1:1 (stock was ~7x too fast).
+- Mouse wheel scrolls every menu list.
+- Separate mouse speed and FOV for Tactical and Bridge.
+- Bridge camera shake away from the hit side, with a switch and strength slider.
 
 ### Gameplay
 - Two torpedo systems (see Highlights).
-- Phaser beams scroll at the speed the ship's hardpoint sets, and tractor beams use the hardpoint's own colours and texture.
-- Torpedo spreads home in sooner (0.5 s instead of 2 s, adjustable).
-- Weapon hits always light the hull, even on big ships like the Borg cube.
-- AI speed-up: AI ships with torpedo evasion off skip the unused torpedo watcher.
-- Bridge crew keep their seats after a quit and reload, on every bridge.
-- Weapon fire is no longer dropped in multiplayer.
+- Phasers scroll at the hardpoint's speed. Tractors use the hardpoint's colours and texture.
+- Torpedo spreads home in sooner (0.5 s, was 2 s, adjustable).
+- Weapon hits always light the hull, even on the Borg cube.
+- AI with torpedo evasion off skips the unused torpedo watcher.
+- Bridge crew keep their seats after quit and reload.
+- Weapon fire no longer dropped in multiplayer.
 
 ### Performance
-- Multithreading (see Highlights). It picks 0, 1 or 2 helpers for your CPU.
-- Big-battle CPU fixes in the exe: sparse scene lists, scene-bound scanning and proximity pair removal. Around 30% less main-thread work in big battles, before the helper threads even start.
-- Preload Extended (see Highlights).
-- Big battles stay faster for longer: explosions and hit effects reuse their old slots instead of piling up. Late in a long fight that is about 5% more FPS on average, and more near the end.
-- Texture compression, with the DDS files made by the exe on first launch. An LCARS progress window shows while they convert.
-- Effect textures stay loaded between missions, so nothing rebuilds mid-battle.
-- Textures leave the graphics card when you leave a mission.
-- 64-bit Memory Helper (see Highlights).
+- Multithreading: 0, 1 or 2 helpers, picked for your CPU.
+- Exe CPU fixes (sparse scene lists, scene-bound scanning, proximity pair removal): ~30% less main-thread work in big battles.
+- Preload Extended.
+- Explosions and hits reuse old slots instead of piling up: ~5% more FPS late in long fights, more near the end.
+- Texture compression, DDS made by the exe on first launch with an LCARS progress window.
+- Effect textures kept between missions, other textures freed when you leave one.
+- 64-bit Memory Helper.
 
 ### Graphics
 - SGSSAA anti-aliasing.
-- Effects, each with its own switch: Glow Bloom, HDR Scene (FP16), Glow Shimmer Fix, Per-Pixel Lighting, Deband, Rim Light, Ship Shadows, Colour Grade, Planet Glow and Heat Ripple.
-- Modern ship highlights, worked out on the GPU (about 7.5% faster).
-- DXVK (Vulkan) set up automatically when your PC supports it.
-- Effects never draw over the menus or the HUD.
-- The Performance Overlay comes in four sizes, with rows for the Memory Helper.
+- Switchable effects: Glow Bloom, HDR Scene (FP16), Glow Shimmer Fix, Per-Pixel Lighting, Deband, Rim Light, Ship Shadows, Colour Grade, Planet Glow, Heat Ripple.
+- GPU ship highlights (~7.5% faster).
+- DXVK (Vulkan) set up automatically when supported.
+- Effects never draw over menus or the HUD.
+- Performance Overlay in four sizes, with Memory Helper rows.
 
 ### Sound
-- High Quality sound: 64 voices, all Full HRTF, at 44.1 kHz.
+- High Quality: 64 voices, Full HRTF, 44.1 kHz.
 
 ### LCARS screens
-- A new LCARS Configure, with sliders, profiles, a Mod Menus page and live previews from the in-battle Esc menu.
-- LCARS main menu top bar, New Game, Load Game, Multiplayer (with an in-game Esc page) and the quit dialog.
-- A new LCARS Quick Battle that reads your install's own ships and regions (no Foundation needed), with a 3D ship preview.
-- Spectate mode in Quick Battle, with its own camera, so you can sit back and watch the fight.
-- Early cinematic cameras, optional: F7 Duel Cam and F8 War Correspondent. More to come.
-- Glass LCARS: backlit "light box" panels with a sheen, sharp fonts in every LCARS menu, and a calmer backdrop when you open Configure in battle.
-- Faster, sharper LCARS menus: they react at once, and nothing from the stock menus shows or reacts behind them.
-- Startup Sequence: an LCARS "incoming transmission" opening around the 1080 movie.
-- Shutdown Sequence: the screen powers down piece by piece when you quit.
-- A loading screen with a progress bar that learns how long each load takes. You can use your own picture.
-- Orion compatibility: the Orion Theme Selector, mutators and Wave Defense show up when Orion Delta RC4.1 is installed.
+- Configure: sliders, profiles, Mod Menus page, live previews from the Esc menu.
+- Main menu top bar, New Game, Load Game, Multiplayer (plus in-game Esc page), quit dialog.
+- Quick Battle that reads your install's ships and regions (no Foundation needed), with 3D preview.
+- Quick Battle Spectate mode with its own camera.
+- Early optional cinematic cameras: F7 Duel Cam, F8 War Correspondent. More to come.
+- Glass LCARS: backlit panels, sharp fonts, calmer in-battle Configure backdrop.
+- Menus react at once, nothing stock shows behind them.
+- Startup Sequence ("incoming transmission") and Shutdown Sequence (powers down piece by piece).
+- Loading screen with a progress bar that learns load times. Use your own picture if you like.
+- Orion Delta RC4.1: Theme Selector, mutators and Wave Defense show up.
 
 ### Co-op (beta)
-- Host and join from our own LCARS screen instead of the stock multiplayer screens.
-- A co-op lobby: the crew joins and picks seats, then the host engages. Each seat can be crew, AI or closed.
-- Join a game already in progress, with a file check so everyone runs the same thing.
-- Shared targeting, the bridge view for crew, and join and leave lines in chat.
-- Co-op Skirmish, plus Waves as a test mode.
+- Host and join from our LCARS screen, not the stock MP screens.
+- Lobby with seats (crew, AI or closed). Host engages when ready.
+- Join in progress, with a file check.
+- Shared targeting, bridge view for crew, join/leave lines in chat.
+- Co-op Skirmish, Waves as a test mode.
 
-### Stability, safety and logs
-- Crash guards for known stock crashes (freed objects, failed allocations, Python None, a 16 MB main thread stack), plus fixes for crashes on quit, on changing Sound Quality and on skipping the intro.
-- Save games fixed: saving had quietly broken in the stock game. It works again, and saves from before the patch still load.
-- The game's own crash writer no longer crashes itself, so you get a proper crash report.
-- A crash when you went Configure > resolution > Multiplayer is fixed.
+### Stability and logs
+- Crash guards for known stock crashes (freed objects, failed allocations, Python None, 16 MB main thread stack). Fixes for crashes on quit, changing Sound Quality and skipping the intro.
+- Saving fixed (it had quietly broken). Old saves still load.
+- The crash writer no longer crashes itself, so you get a real report.
+- Configure > resolution > Multiplayer crash fixed.
 - No crash after the intro on mods like KM.
-- The patcher finds other graphics wrappers (dgVoodoo, ReShade) and Windows compatibility mode, which crash the game, and offers to move them aside. Undo puts them back.
-- One log switch, a log per channel, a crash log with details, and the logs of your last 5 runs kept.
-- An optional 4 GB (Large Address Aware) flag.
-- Undo puts everything back.
+- Finds wrappers that crash the game (dgVoodoo, ReShade) and compatibility mode, offers to move them aside.
+- One log switch, logs per channel, crash log, last 5 runs kept.
+- Optional 4 GB (Large Address Aware) flag.
 
 ### The patcher
-- One patcher for Windows and Linux, with DXVK on or off.
-- It backs up what it changes, and Undo restores only its own backups.
-- It writes a receipt of the version it installed.
-- Every exe change is checked against the stock bytes first. Nothing is applied blind.
+- One patcher for Windows and Linux, DXVK on or off.
+- Backs up what it changes. Undo restores only its own backups and puts everything back.
+- Writes a receipt of what it installed.
+- Every exe change checked against the stock bytes first. Nothing applied blind.
 
 ## What's to come
 
-- **Download ships in game.** Browse and install ships from inside Bridge Commander.
-- **A new hull damage system.** Hull damage drawn with real depth on the ships. The masking is ready.
-- **New suns.** Stars that look and behave like stars, including novas.
-- **PlanetFX.** New planets, already used in our cutscenes, coming to the game.
-- **Planet landings.** Early work started. They'll use texture streaming (below), so they can be done the modern way rather than in an older style.
-- **Volumetric effects.** Explosions, shockwaves, fires and warp with real depth. This one is next. It was close to finished and should have been in this release, but lost backups and a bug set it back.
-- **Texture streaming.** Big textures loaded as they're needed, so heavy mods and HD packs fit.
-- **Network code upgrades.** Easier hosting with automatic port opening, and steadier online play. Already started.
-- **Co-op campaign.** The story missions played together.
-- **Bridge co-op for roleplay groups.** Each player takes a station on the same ship (Helm, Tactical, Science, Engineering) and the captain gives the orders.
-- **Mission scripter.** Place ships, set objectives, and write the hails and story beats for your own crew.
-- **More screen setups.** A station console on a second monitor, the view across several monitors, or a tablet as a station panel.
-- **CameraNX.** Cinematic cameras that frame the battle like a space shot from the show.
-- **VR.** The captain's chair, on the bridge.
-- **The LCARS app.** One app to install, update and manage the patch and its add-ons.
-- **An optional mod pack.** Extras that sit outside the core patch, such as sound upgrades, for players who want them.
+- **Volumetric effects.** Explosions, shockwaves, fires and warp with real depth. Next up. It was close to finished and should have been in this release, but lost backups and a bug set it back.
+- **Download ships in game.** Browse and install from inside BC.
+- **New hull damage.** Real depth on the ships. Masking is ready.
+- **New suns.** Stars that behave like stars, novas included.
+- **PlanetFX.** New planets, coming to the game.
+- **Planet landings.** Early work, built on texture streaming.
+- **Texture streaming.** Big textures loaded as needed, so heavy mods and HD packs fit.
+- **Network upgrades.** Auto port opening, steadier online play. Started.
+- **Co-op campaign.** The story missions, together.
+- **Bridge co-op for roleplay groups.** Helm, Tactical, Science, Engineering, captain gives the orders.
+- **Mission scripter.** Ships, objectives, hails and story beats for your own crew.
+- **More screens.** Station console on a second monitor, multi-monitor view, tablet as a station panel.
+- **CameraNX.** Cinematic cameras that frame the battle like a shot from the show.
+- **VR.** The captain's chair.
+- **The LCARS app.** Install, update and manage the patch and add-ons.
+- **Optional mod pack.** Extras like sound upgrades.
 - And a lot more.
 
 ## Thanks
 
-**Code this patch is built on**
-- **AlphaYellow**: the widescreen FOV fix (MIT), now built into the exe.
-- **elishacloud**: dxwrapper (zlib), which the graphics chain runs on.
-- **DXVK** by Philip Rebohle and contributors (zlib), for Vulkan.
+**Code it's built on:** **AlphaYellow** (widescreen FOV fix, MIT), **elishacloud** (dxwrapper, zlib), **DXVK** by Philip Rebohle and contributors (zlib).
 
-**The Bridge Commander community**
-- **VonFrank**, for Bridge Commander: Remastered.
-- **Denacity**, for Bedrock.
-- **Orion**, for Orion Delta.
-- **Michael Wiley**, for the Dauntless and his ships.
-- **Whiskers**, for testing on Windows and in co-op.
-- **Cuddly**, for the 64-voice sound tip.
-- **Nocturnal** and **Tethys**.
-- Everyone who tested, sent logs and put up with broken builds.
+**BC community:** **VonFrank** (Remastered), **Denacity** (Bedrock), **Orion** (Orion Delta), **Michael Wiley** (the Dauntless and his ships), **Whiskers** (Windows and co-op testing), **Cuddly** (the 64-voice tip), **Nocturnal**, **Tethys**, and everyone who tested, sent logs and put up with broken builds.
 
-**The Morrowind modding community**
-- MGE XE, Greatness7's 64-bit helper work and OpenMW showed what an old engine can be pushed to do. Our Memory Helper follows the same idea, and their open work helped this project a lot.
+**The Morrowind modding community:** MGE XE, Greatness7's 64-bit helper work and OpenMW showed what an old engine can do. Our Memory Helper follows the same idea.
 
 ## Install
 
-1. Unzip the patch. The easiest place is inside the game folder, next to `stbc.exe`. If it can't find `stbc.exe`, it asks you to pick it.
-2. Windows 10/11: run `PATCH.bat`. It uses the PowerShell built into Windows, so there's nothing else to install. If Windows blocks it, right-click the zip, choose Properties, tick Unblock, then unzip.
+1. Unzip the patch, easiest inside the game folder next to `stbc.exe` (it asks if it can't find it).
+2. Windows 10/11: run `PATCH.bat`. Nothing else to install. If Windows blocks it: right-click the zip, Properties, tick Unblock, unzip again.
 3. Linux (Steam/Proton, Lutris, Wine): run `./patch.sh`.
-4. To remove it, run `UNDO.bat` (Linux: `./patch.sh undo`).
+4. Remove: `UNDO.bat` (Linux: `./patch.sh undo`).
 
-The README inside the zip has the full details, every off switch, and what has been tested.
+Full details, every off switch and what's been tested are in the README inside the zip.
 
 ## Problems
 
