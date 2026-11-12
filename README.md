@@ -46,6 +46,8 @@ Grab the latest from **[Releases](../../releases/latest)** (patch zip + What's N
 - New Skip Intro Video menu option (General, and the LCARS Display page): turn it on and the opening movies are skipped every launch. Off by default.
 - Faster windowed mode and loading screens.
 - Smooth motion even after days of uptime (no UptimeFaker needed).
+- *More to come.*
+
 
 ### Controls
 - 1:1 mouse, no over-rotation, no lost slow movements.
@@ -53,6 +55,8 @@ Grab the latest from **[Releases](../../releases/latest)** (patch zip + What's N
 - Mouse wheel scrolls every menu list.
 - Separate mouse speed and FOV for Tactical and Bridge.
 - Bridge camera shake away from the hit side, with a switch and strength slider.
+- *More to come.*
+
 
 ### Gameplay
 - Two torpedo systems (see Highlights).
@@ -61,6 +65,8 @@ Grab the latest from **[Releases](../../releases/latest)** (patch zip + What's N
 - Weapon hits always light the hull, even on the Borg cube.
 - AI with torpedo evasion off skips the unused torpedo watcher.
 - Bridge crew keep their seats after quit and reload.
+- *More to come.*
+
 
 ### Performance
 - Multithreading: 0, 1 or 2 helpers, picked for your CPU.
@@ -70,6 +76,12 @@ Grab the latest from **[Releases](../../releases/latest)** (patch zip + What's N
 - Texture compression, DDS made by the exe on first launch with an LCARS progress window.
 - Effect textures kept between missions, other textures freed when you leave one.
 - 64-bit Memory Helper.
+- No more GPU readback every frame: the exe skips a back-buffer lock nothing used, which through the wrapper meant a full readback twice a frame.
+- Low-fragmentation heap turned on at start, so memory stays usable for longer.
+- Hull damage texture cache and texture format cache.
+- No menu stutter after the intro.
+- *More to come.*
+
 
 ### Graphics
 - SGSSAA anti-aliasing.
@@ -78,9 +90,13 @@ Grab the latest from **[Releases](../../releases/latest)** (patch zip + What's N
 - DXVK (Vulkan) set up automatically when supported.
 - Effects never draw over menus or the HUD.
 - Performance Overlay in four sizes, with Memory Helper rows.
+- *More to come.*
+
 
 ### Sound
 - High Quality: 64 voices, Full HRTF, 44.1 kHz.
+- *More to come.*
+
 
 ### LCARS screens
 - Configure: sliders, profiles, Mod Menus page, live previews from the Esc menu.
@@ -93,11 +109,15 @@ Grab the latest from **[Releases](../../releases/latest)** (patch zip + What's N
 - Startup Sequence ("incoming transmission") and Shutdown Sequence (powers down piece by piece).
 - Loading screen with a progress bar that learns load times. Use your own picture if you like.
 - Orion Delta RC4.1: Theme Selector, mutators and Wave Defense show up.
+- *More to come.*
+
 
 ### Multiplayer
 - New LCARS Multiplayer screen: Internet, LAN and Direct Connect on one page.
 - Passworded games show a padlock, and only ask for a password when they need one.
 - Weapon fire no longer dropped in multiplayer and co-op.
+- *More to come.*
+
 
 ### Co-op (beta)
 - Host and join from our LCARS screen, not the stock MP screens.
@@ -106,6 +126,8 @@ Grab the latest from **[Releases](../../releases/latest)** (patch zip + What's N
 - Shared targeting, join/leave lines in chat.
 - Bridge view for crew: switch to the bridge and stand at the Tactical station.
 - Co-op Skirmish, Waves as a test mode.
+- *More to come.*
+
 
 ### Stability and logs
 - Crash guards for known stock crashes (freed objects, failed allocations, Python None, 16 MB main thread stack). Fixes for crashes on quit, changing Sound Quality and skipping the intro.
@@ -116,6 +138,7 @@ Grab the latest from **[Releases](../../releases/latest)** (patch zip + What's N
 - Finds wrappers that crash the game (dgVoodoo, ReShade) and compatibility mode, offers to move them aside.
 - One log switch, logs per channel, crash log, last 5 runs kept.
 - Optional 4 GB (Large Address Aware) flag.
+- *More to come.*
 
 ### The patcher
 - One patcher for Windows and Linux, DXVK on or off.
@@ -124,6 +147,8 @@ Grab the latest from **[Releases](../../releases/latest)** (patch zip + What's N
 - Every exe change checked against the stock bytes first. Nothing applied blind.
 
 ## What's to come
+
+More is already planned, and no doubt we'll find more as we go. The aim is to get the most the engine can do and show, any way we can.
 
 - **Volumetric effects.** Explosions, shockwaves, fires and warp with real depth. Next up. It was close to finished and should have been in this release, but lost backups and a bug set it back.
 - **Download ships in game.** Browse and install from inside BC.
