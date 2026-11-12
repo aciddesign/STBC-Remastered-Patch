@@ -2,6 +2,7 @@
 
 [![Windows: supported](https://img.shields.io/badge/Windows-supported-2ea44f?logo=windows&logoColor=white)](#install)
 [![Linux: supported](https://img.shields.io/badge/Linux%20(Proton%2FWine)-supported-2ea44f?logo=linux&logoColor=white)](#install)
+[![Steam Deck: coming soon](https://img.shields.io/badge/Steam%20Deck-coming%20soon-lightgrey?logo=steamdeck&logoColor=white)](#whats-to-come)
 [![macOS: coming soon](https://img.shields.io/badge/macOS-coming%20soon-lightgrey?logo=apple&logoColor=white)](#whats-to-come)
 [![Latest release](https://img.shields.io/github/v/release/acidtwin/STBC-Remastered-Patch?include_prereleases&label=latest%20release)](../../releases/latest)
 [![Game: Star Trek Bridge Commander](https://img.shields.io/badge/game-Star%20Trek%3A%20Bridge%20Commander%20(2002)-blue)](#)
@@ -137,6 +138,7 @@ Grab the latest from **[Releases](../../releases/latest)** (patch zip + What's N
 - **Mission scripter.** Ships, objectives, hails and story beats for your own crew.
 - **More screens.** Station console on a second monitor, multi-monitor view, tablet as a station panel.
 - **CameraNX.** Cinematic cameras that frame the battle like a shot from the show.
+- **Steam Deck and macOS.** Coming soon.
 - **VR.** The captain's chair.
 - **The LCARS app.** Install, update and manage the patch and add-ons.
 - **Optional mod pack.** Extras like sound upgrades.
