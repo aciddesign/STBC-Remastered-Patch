@@ -9,7 +9,7 @@
 
 An unofficial fan patch for **Star Trek: Bridge Commander** (2002). One patched `stbc.exe` fixes and modernises the game, and a graphics layer comes with it. No game or mod script is replaced: the changes run in memory, from the exe and a few new script files. It works on the stock 1.1 game (CD, no-CD or GOG exe), with or without the 4 GB patch, and with mods that keep the stock scripts in place: Remastered 2.0, Remastered Orion (Orion Delta), Legacy 1.0, Kobayashi Maru and many more.
 
-I've been tinkering with this game since not long after it came out in 2002. It started with hacking `Effects.py`, and my first camera work lived in there too, long before it had a name. The serious work began in 2023 with my first video, with Claude and Codex helping along the way. Recently, a much deeper understanding of the game's own exe has sped it up more than ever, and there's a lot more on the way.
+I've been tinkering with this game since not long after it came out in 2002. It started with hacking `Effects.py`, and my first camera work lived in there too, long before it had a name. For most of those years it was all just for me. I mostly lurked, apart from now and then trying to push my Effects file on people. Discord got me properly involved, and the serious work began in 2023 with my first video, with Claude and Codex helping along the way. This is the first time I've really shared any of it. Recently, a much deeper understanding of the game's own exe has sped it up more than ever, and there's a lot more on the way.
 
 ## Download
 
