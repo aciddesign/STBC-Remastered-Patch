@@ -157,6 +157,7 @@ More is already planned, and no doubt we'll find more as we go. The aim is to ge
 - **New suns.** Stars that behave like stars, novas included.
 - **PlanetFX.** New planets, coming to the game.
 - **Texture streaming.** Big textures loaded as needed, so heavy mods and HD packs fit.
+- **Planet landings.** In research, with texture streaming as the groundwork.
 - **Network upgrades.** Automatic port opening so hosting just works, a warning when your port is closed, the host sending missing files to players, and steadier online play in general. Started.
 - **Co-op campaign.** The story missions, together.
 - **More co-op on the bridge.** Crew at their stations, synced head-look and arm movement. Parked for now while the core features come first.
