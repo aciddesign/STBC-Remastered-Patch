@@ -156,7 +156,6 @@ More is already planned, and no doubt we'll find more as we go. The aim is to ge
 - **New hull damage.** Real depth on the ships. Masking is ready.
 - **New suns.** Stars that behave like stars, novas included.
 - **PlanetFX.** New planets, coming to the game.
-- **Planet landings.** Early work, built on texture streaming.
 - **Texture streaming.** Big textures loaded as needed, so heavy mods and HD packs fit.
 - **Network upgrades.** Automatic port opening so hosting just works, a warning when your port is closed, the host sending missing files to players, and steadier online play in general. Started.
 - **Co-op campaign.** The story missions, together.
