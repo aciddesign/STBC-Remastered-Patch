@@ -101,7 +101,8 @@ Grab the latest from **[Releases](../../releases/latest)** (patch zip + What's N
 - Host and join from our LCARS screen, not the stock MP screens.
 - Lobby with seats (crew, AI or closed). Host engages when ready.
 - Join in progress, with a file check.
-- Shared targeting, bridge view for crew, join/leave lines in chat.
+- Shared targeting, join/leave lines in chat.
+- Bridge view for crew: switch to the bridge and stand at the Tactical station.
 - Co-op Skirmish, Waves as a test mode.
 
 ### Stability and logs
@@ -131,6 +132,7 @@ Grab the latest from **[Releases](../../releases/latest)** (patch zip + What's N
 - **Texture streaming.** Big textures loaded as needed, so heavy mods and HD packs fit.
 - **Network upgrades.** Automatic port opening so hosting just works, a warning when your port is closed, the host sending missing files to players, and steadier online play in general. Started.
 - **Co-op campaign.** The story missions, together.
+- **More co-op on the bridge.** Crew at their stations, synced head-look and arm movement. Parked for now while the core features come first.
 - **Bridge co-op for roleplay groups.** Helm, Tactical, Science, Engineering, captain gives the orders.
 - **Mission scripter.** Ships, objectives, hails and story beats for your own crew.
 - **More screens.** Station console on a second monitor, multi-monitor view, tablet as a station panel.
@@ -148,7 +150,7 @@ Grab the latest from **[Releases](../../releases/latest)** (patch zip + What's N
 
 **Whiskers.** For letting me go on and on at him with ideas this last week or so. I stepped away from Discord and the scene for 3 years and came back bottled up with things to talk about, and he and VonFrank took the brunt of it. Sound advice, and Windows and co-op testing too. <sub>(Riker clone to be sent when technology permits.)</sub>
 
-**BC community:** **Denacity** (Bedrock, and a bit of advice), **Orion** (Orion Delta), **Michael Wiley** (for his advice, and the cutscene work in progress), **Cuddly** (the 64-voice tip), **Nocturnal**, **Tethys**, and everyone who tested, sent logs and put up with broken builds.
+**BC community:** **Denacity** (Bedrock, and advice), **Orion** (Orion Delta), **Michael Wiley** (for his advice, and the cutscene work in progress), **Cuddly** (the 64-voice tip), **Nocturnal**, **Tethys**, and everyone who tested, sent logs and put up with broken builds.
 
 **The Morrowind modding community:** MGE XE, Greatness7's 64-bit helper work and OpenMW showed what an old engine can do. Our Memory Helper follows the same idea.
 
