@@ -5,9 +5,11 @@
 [![macOS: coming soon](https://img.shields.io/badge/macOS-coming%20soon-lightgrey?logo=apple&logoColor=white)](#whats-to-come)
 [![Latest release](https://img.shields.io/github/v/release/acidtwin/STBC-Remastered-Patch?include_prereleases&label=latest%20release)](../../releases/latest)
 [![Game: Star Trek Bridge Commander](https://img.shields.io/badge/game-Star%20Trek%3A%20Bridge%20Commander%20(2002)-blue)](#)
-[![Works on stock 1.1, GOG, Remastered 2.0, Orion Delta, Legacy 1.0, Kobayashi Maru and more](https://img.shields.io/badge/works%20on-stock%201.1%20%7C%20GOG%20%7C%20Remastered%202.0%20%7C%20Orion%20Delta%20%7C%20Legacy%201.0%20%7C%20Kobayashi%20Maru%20%7C%20and%20more-blue)](#)
+[![Works on stock 1.1, GOG, Remastered, Orion Delta, Legacy 1.0, Kobayashi Maru and more](https://img.shields.io/badge/works%20on-stock%201.1%20%7C%20GOG%20%7C%20Remastered%20%7C%20Orion%20Delta%20%7C%20Legacy%201.0%20%7C%20Kobayashi%20Maru%20%7C%20and%20more-blue)](#)
 
-An unofficial fan patch for **Star Trek: Bridge Commander**. One patched `stbc.exe` plus a graphics layer. No game or mod script is replaced, everything runs in memory. Works on stock 1.1 (CD, no-CD, GOG), with or without the 4 GB patch, and on mods that keep the stock scripts: Remastered 2.0, Remastered Orion (Orion Delta), Legacy 1.0, Kobayashi Maru and many more.
+An unofficial fan patch for **Star Trek: Bridge Commander**. One patched `stbc.exe` plus a graphics layer. No game or mod script is replaced, everything runs in memory. Works on stock 1.1 (CD, no-CD, GOG), with or without the 4 GB patch, and on mods that keep the stock scripts: Remastered, Remastered Orion (Orion Delta), Legacy 1.0, Kobayashi Maru and many more.
+
+**Best experience: VonFrank's Bridge Commander: Remastered.** It's the recommended base and the one I build on, out of respect for what VonFrank has done for the community.
 
 I've tinkered with BC since not long after it came out, mostly just for myself, hacking `Effects.py` and lurking. Discord got me involved, the serious work started in 2023, and Claude and Codex have helped along the way. This is the first time I've really shared any of it.
 
@@ -138,7 +140,7 @@ Grab the latest from **[Releases](../../releases/latest)** (patch zip + What's N
 
 **Code it's built on:** **AlphaYellow** (widescreen FOV fix, MIT), **elishacloud** (dxwrapper, zlib), **DXVK** by Philip Rebohle and contributors (zlib).
 
-**BC community:** **VonFrank** (Remastered), **Denacity** (Bedrock), **Orion** (Orion Delta), **Michael Wiley** (the Dauntless and his ships), **Whiskers** (Windows and co-op testing), **Cuddly** (the 64-voice tip), **Nocturnal**, **Tethys**, and everyone who tested, sent logs and put up with broken builds.
+**BC community:** **VonFrank** (Bridge Commander: Remastered), **Denacity** (Bedrock), **Orion** (Orion Delta), **Michael Wiley** (the Dauntless and his ships), **Whiskers** (Windows and co-op testing), **Cuddly** (the 64-voice tip), **Nocturnal**, **Tethys**, and everyone who tested, sent logs and put up with broken builds.
 
 **The Morrowind modding community:** MGE XE, Greatness7's 64-bit helper work and OpenMW showed what an old engine can do. Our Memory Helper follows the same idea.
 
