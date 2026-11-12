@@ -102,7 +102,7 @@ This repo holds releases only. It contains no game files, so you need your own c
 - **New suns.** Stars that look and behave like stars, including novas.
 - **PlanetFX.** New planets, already used in our cutscenes, coming to the game.
 - **Planet landings.** Early work started. They'll use texture streaming (below), so they can be done the modern way rather than in an older style.
-- **Volumetric effects.** Explosions, shockwaves, fires and warp with real depth.
+- **Volumetric effects.** Explosions, shockwaves, fires and warp with real depth. This one is next. It was close to finished and should have been in this release, but lost backups and a bug set it back.
 - **Texture streaming.** Big textures loaded as they're needed, so heavy mods and HD packs fit.
 - **Network code upgrades.** Easier hosting with automatic port opening, and steadier online play. Already started.
 - **Co-op campaign.** The story missions played together.
