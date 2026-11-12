@@ -62,6 +62,7 @@ Grab the latest from **[Releases](../../releases/latest)** (patch zip + What's N
 - Two torpedo systems (see Highlights).
 - Phasers scroll at the hardpoint's speed. Tractors use the hardpoint's colours and texture.
 - Torpedo spreads home in sooner (0.5 s, was 2 s, adjustable).
+- *Thanks to VonFrank for pushing these three weapons fixes.*
 - Weapon hits always light the hull, even on the Borg cube.
 - AI with torpedo evasion off skips the unused torpedo watcher.
 - Bridge crew keep their seats after quit and reload.
@@ -174,7 +175,7 @@ More is already planned, and no doubt we'll find more as we go. The aim is to ge
 
 **Third-party parts.** Each covers one piece, and everything else is our own exe fixes and code: **AlphaYellow** (the FOV patch sites, from their MIT-licensed FOV fix), **elishacloud** (dxwrapper, zlib, the DX7 to DX9 step), **DXVK** by Philip Rebohle and contributors (zlib, optional Vulkan).
 
-**VonFrank.** He won't say it, so I will. He spent years on Bridge Commander: Remastered for the community and for new players. Back then BC was a crashing, buggy mess whatever mod you ran, and Remastered finally made it stable. Because of him new players came, YouTubers took an interest, and new modders, ships and ideas followed. People had ideas and talked a lot, but a domino had missed and everything stalled, leaving just talk and dead projects. He flicked the next one, and many of the engine-level projects going on now, this one included, follow from that. Thanks too for all the advice and ideas on this patch. It's the least he deserves.
+**VonFrank.** He won't say it, so I will. He spent years on Bridge Commander: Remastered for the community and for new players. Back then BC was a crashing, buggy mess whatever mod you ran, and Remastered finally made it stable. Because of him new players came, YouTubers took an interest, and new modders, ships and ideas followed. People had ideas and talked a lot, but a domino had missed and everything stalled, leaving just talk and dead projects. He flicked the next one, and many of the engine-level projects going on now, this one included, follow from that. Thanks too for all the advice and ideas on this patch, and for pushing the weapons work: torpedoes, phasers and tractors, systems I'd never dug into. It's the least he deserves.
 
 **Whiskers.** For letting me go on and on at him with ideas this last week or so. I stepped away from Discord and the scene for 3 years and came back bottled up with things to talk about, and he and VonFrank took the brunt of it. Sound advice, and Windows and co-op testing too. <sub>(Riker clone to be sent when technology permits.)</sub>
 
