@@ -40,7 +40,8 @@ Full details, every off switch and what's been tested are in the README inside t
 - **Widescreen done right, in the exe.** Real widescreen resolutions, Hor+ FOV, HUD and fonts sized to your screen. No plugin needed. 4:3 unchanged.
 - **Preload Extended.** Big effect and ship textures load during the loading screen, so the first explosion doesn't stutter.
 - **New LCARS screens.** Configure, Quick Battle with 3D ship preview, New Game, Load Game, Multiplayer, quit dialog, loading screen, Startup and Shutdown Sequences.
-- **Graphics.** SGSSAA (sparse grid supersampling anti-aliasing), bloom, HDR, per-pixel lighting, ship shadows, colour grading, GPU ship highlights. Every effect has its own switch.
+- **Driver-free SGSSAA.** True sparse grid supersampling built into the game through our own d3d9 layer. Any GPU, Windows and Linux, no NVIDIA driver tricks. The first game we know of with SGSSAA built in like this.
+- **Graphics.** Bloom, HDR, per-pixel lighting, ship shadows, colour grading, GPU ship highlights. Every effect has its own switch.
 - **Texture compression.** Compressed DDS textures: video memory 5.5 GB down to 3.4 GB in our tests.
 - **Performance Overlay.** FPS, frame times, every CPU core, GPU, memory and address space.
 
