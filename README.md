@@ -182,6 +182,7 @@ More is already planned, and no doubt we'll find more as we go. The aim is to ge
 - **Wreck and debris limit.** Keeps the wreckage in check, with a vaporize effect for old wrecks and an Auto mode.
 - **Download ships in game.** Browse and install from inside BC.
 - **Ship damage.** Hull damage with real depth on the ships. In development for a while now, with its own demo tool, and the masking of the right areas is already done. It ships when it meets our quality bar.
+- **Improved collisions.** A more realistic collision rework, built on the damage and break-up system. Parked for now.
 - **New suns.** Stars that behave like stars, novas included.
 - **PlanetFX.** New planets, coming to the game.
 - **Texture streaming.** Big textures loaded as needed, so heavy mods and HD packs fit.
