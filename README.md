@@ -122,6 +122,7 @@ Full details, every off switch and what's been tested are in the README inside t
 
 ### LCARS screens
 - Configure: sliders, profiles, Mod Menus page, live previews from the Esc menu.
+- On/off switches in Configure > Graphics for Multithreading, Memory Helper and Two Torpedo Systems. Turning torpedoes off brings back the stock weapons panel from the next mission.
 - Themes: Classic (the stock look) or LcarsNX (our LCARS screens), picked in Configure and switched without restarting. Classic is the default on stock and Remastered.
 - Main menu top bar, New Game, Load Game, Multiplayer (plus in-game Esc page), quit dialog.
 - Quick Battle that reads your install's ships and regions (no Foundation needed), with 3D preview.
