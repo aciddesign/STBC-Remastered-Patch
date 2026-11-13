@@ -8,7 +8,7 @@
 [![Game: Star Trek Bridge Commander](https://img.shields.io/badge/game-Star%20Trek%3A%20Bridge%20Commander%20(2002)-blue)](#)
 [![Works on stock 1.1, GOG, Remastered, Orion Delta, Legacy 1.0, Kobayashi Maru and more](https://img.shields.io/badge/works%20on-stock%201.1%20%7C%20GOG%20%7C%20Remastered%20%7C%20Orion%20Delta%20%7C%20Legacy%201.0%20%7C%20Kobayashi%20Maru%20%7C%20and%20more-blue)](#)
 
-An unofficial fan patch for **Star Trek: Bridge Commander**. One patched `stbc.exe` plus a graphics layer. Most of it runs in memory. The few stock scripts it updates are backed up first, and Undo puts them back. CD, no-CD or GOG, with or without the 4 GB patch.
+An unofficial fan patch for **Star Trek: Bridge Commander**. One patched `stbc.exe`, a graphics layer and a few new scripts. It only changes stock files it recognises, backs them up first, and Undo puts them back. CD, no-CD or GOG, with or without the 4 GB patch.
 
 **Best experience: VonFrank's Bridge Commander: Remastered.** It's the recommended base and the one I build on, out of respect for what VonFrank has done for the community.
 
@@ -99,6 +99,7 @@ Full details, every off switch and what's been tested are in the README inside t
 - Low-fragmentation heap turned on at start, so memory stays usable for longer.
 - Hull damage texture cache and texture format cache.
 - No menu stutter after the intro.
+- Stock memory leak between missions fixed. Old ships are no longer kept after a mission ends, so long sessions use far less memory (1.1 GB down to 0.47 GB in our test).
 - *More to come.*
 
 
@@ -121,6 +122,7 @@ Full details, every off switch and what's been tested are in the README inside t
 
 ### LCARS screens
 - Configure: sliders, profiles, Mod Menus page, live previews from the Esc menu.
+- Themes: Classic (the stock look) or LcarsNX (our LCARS screens), picked in Configure and switched without restarting. Classic is the default on stock and Remastered.
 - Main menu top bar, New Game, Load Game, Multiplayer (plus in-game Esc page), quit dialog.
 - Quick Battle that reads your install's ships and regions (no Foundation needed), with 3D preview.
 - Quick Battle Spectate mode with its own camera.
@@ -177,7 +179,6 @@ More is already planned, and no doubt we'll find more as we go. The aim is to ge
 
 - **Volumetric effects.** Explosions, shockwaves, fires and warp with real depth. Next up. It was close to finished and should have been in this release, but lost backups and a bug set it back.
 - **Faster late battles.** Cutting the AI's look-ahead work that slows big battles down near the end. In progress.
-- **Mission memory leak fix.** Stock BC keeps old ships in memory after a mission ends, about 0.2 GB each time. We're tracing it so we can stop it.
 - **Fire groups.** Put your weapons into groups, with a 4th fire key. Denacity's idea.
 - **Wreck and debris limit.** Keeps the wreckage in check, with a vaporize effect for old wrecks and an Auto mode.
 - **Download ships in game.** Browse and install from inside BC.
