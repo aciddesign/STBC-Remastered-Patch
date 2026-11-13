@@ -211,7 +211,7 @@ More is already planned, and no doubt we'll find more as we go. The aim is to ge
 
 **Whiskers.** For letting me go on and on at him with ideas this last week or so. I stepped away from Discord and the scene for 3 years and came back bottled up with things to talk about, and he and VonFrank took the brunt of it. Sound advice, and Windows and co-op testing too. <sub>(Riker clone to be sent when technology permits.)</sub>
 
-**BC community:** **Denacity** (Orion Delta, Bedrock, the coloured ammo and fire group ideas, and advice), **Michael Wiley** (advice) <sub>(and his ship in the cutscene, if the final work meets his quality standards 😉)</sub>, **Cuddly** (the 64-voice tip), **Morgan** (some Windows testing), **Tethys** (for getting me started on Ghidra and exe exploration, about 3 years ago), and everyone who tested, sent logs and put up with broken builds.
+**BC community:** **Denacity** (Orion Delta, Bedrock, the coloured ammo and fire group ideas, and advice), **Michael Wiley** (advice), **Cuddly** (the 64-voice tip), **Morgan** (some Windows testing), **Tethys** (for getting me started on Ghidra and exe exploration, about 3 years ago), and everyone who tested, sent logs and put up with broken builds.
 
 **Mark.** For his advice on licences. If you love BC, check out his project, **[Dauntless](https://bc-dauntless.netlify.app/)**, an open reimplementation of the BC engine.
 
