@@ -35,7 +35,7 @@ Full details, every off switch and what's been tested are in the README inside t
 
 ## Highlights
 
-- **Multithreading (version 1).** Spare CPU cores now handle ship proximity and hull damage. This removes the multi-second proximity freezes in big battles (worst went from 6 s to 0.04 s). Very large battles (80+ ships) can still be slow because of the AI's own planning, which is being worked on separately. More threading and optimisations to come.
+- **Multithreading (version 1).** Spare CPU cores now handle ship proximity and hull damage. This removes the multi-second proximity freezes in big battles (worst went from 6 s to 0.04 s). Smoother big battles, far fewer hitches: in our 81-ship test, hitches over 100 ms fell from 195 to about 115. Very large battles (80+ ships) can still be slow because of the AI's own planning, which is being worked on separately. More threading and optimisations to come.
 - **64-bit Memory Helper (version 1).** BC is 32-bit, so everything has to fit in 4 GB and big mods and HD textures run out of room. `bchost.exe` is a separate 64-bit helper that holds big data outside the game's 4 GB and hands it back when needed. Up to 2 GB by default, 3.27 GB held in testing on real Windows. Normal visible file, nothing hidden or packed. If it's missing or stops, the game carries on. On/off in Configure, usage on the Performance Overlay. More optimisations to come.
 - **Two torpedo systems.** Ships with two torpedo types fire them separately: second torpedo panel with coloured ammo (Denacity's idea), X fires the second system. Single player, co-op and multiplayer.
 - **Co-op (beta).** Play one mission together. Crew picks seats in the lobby, shared targets, bridge view for crew.
@@ -176,6 +176,10 @@ Full details, every off switch and what's been tested are in the README inside t
 More is already planned, and no doubt we'll find more as we go. The aim is to get the most the engine can do and show, any way we can.
 
 - **Volumetric effects.** Explosions, shockwaves, fires and warp with real depth. Next up. It was close to finished and should have been in this release, but lost backups and a bug set it back.
+- **Faster late battles.** Cutting the AI's look-ahead work that slows big battles down near the end. In progress.
+- **Mission memory leak fix.** Stock BC keeps old ships in memory after a mission ends, about 0.2 GB each time. We're tracing it so we can stop it.
+- **Fire groups.** Put your weapons into groups, with a 4th fire key. Denacity's idea.
+- **Wreck and debris limit.** Keeps the wreckage in check, with a vaporize effect for old wrecks and an Auto mode.
 - **Download ships in game.** Browse and install from inside BC.
 - **Ship damage.** Hull damage with real depth on the ships. In development for a while now, with its own demo tool, and the masking of the right areas is already done. It ships when it meets our quality bar.
 - **New suns.** Stars that behave like stars, novas included.
@@ -204,7 +208,7 @@ More is already planned, and no doubt we'll find more as we go. The aim is to ge
 
 **Whiskers.** For letting me go on and on at him with ideas this last week or so. I stepped away from Discord and the scene for 3 years and came back bottled up with things to talk about, and he and VonFrank took the brunt of it. Sound advice, and Windows and co-op testing too. <sub>(Riker clone to be sent when technology permits.)</sub>
 
-**BC community:** **Denacity** (Orion Delta, Bedrock, the coloured ammo idea, and advice), **Michael Wiley** (advice) <sub>(and his ship in the cutscene, if the final work meets his quality standards 😉)</sub>, **Cuddly** (the 64-voice tip), **Morgan** (some Windows testing), **Tethys** (for getting me started on Ghidra and exe exploration, about 3 years ago), and everyone who tested, sent logs and put up with broken builds.
+**BC community:** **Denacity** (Orion Delta, Bedrock, the coloured ammo and fire group ideas, and advice), **Michael Wiley** (advice) <sub>(and his ship in the cutscene, if the final work meets his quality standards 😉)</sub>, **Cuddly** (the 64-voice tip), **Morgan** (some Windows testing), **Tethys** (for getting me started on Ghidra and exe exploration, about 3 years ago), and everyone who tested, sent logs and put up with broken builds.
 
 **Mark.** For his advice on licences. If you love BC, check out his project, **[Dauntless](https://bc-dauntless.netlify.app/)**, an open reimplementation of the BC engine.
 
