@@ -33,8 +33,8 @@ Full details, every off switch and what's been tested are in the README inside t
 
 ## Highlights
 
-- **Multithreading.** Spare CPU cores now handle ship proximity and hull damage. This removes the multi-second proximity freezes in big battles (worst went from 6 s to 0.04 s). Very large battles (80+ ships) can still be slow because of the AI's own planning, which is being worked on separately.
-- **64-bit Memory Helper.** BC is 32-bit, so everything has to fit in 4 GB and big mods and HD textures run out of room. `bchost.exe` is a separate 64-bit helper that holds big data outside the game's 4 GB and hands it back when needed. Up to 2 GB by default, 3.27 GB held in testing on real Windows. Normal visible file, nothing hidden or packed. If it's missing or stops, the game carries on. On/off in Configure, usage on the Performance Overlay.
+- **Multithreading (version 1).** Spare CPU cores now handle ship proximity and hull damage. This removes the multi-second proximity freezes in big battles (worst went from 6 s to 0.04 s). Very large battles (80+ ships) can still be slow because of the AI's own planning, which is being worked on separately. More threading and optimisations to come.
+- **64-bit Memory Helper (version 1).** BC is 32-bit, so everything has to fit in 4 GB and big mods and HD textures run out of room. `bchost.exe` is a separate 64-bit helper that holds big data outside the game's 4 GB and hands it back when needed. Up to 2 GB by default, 3.27 GB held in testing on real Windows. Normal visible file, nothing hidden or packed. If it's missing or stops, the game carries on. On/off in Configure, usage on the Performance Overlay. More optimisations to come.
 - **Two torpedo systems.** Ships with two torpedo types fire them separately: second torpedo panel with coloured ammo (Denacity's idea), X fires the second system. Single player, co-op and multiplayer.
 - **Co-op (beta).** Play one mission together. Crew picks seats in the lobby, shared targets, bridge view for crew.
 - **Widescreen done right, in the exe.** Real widescreen resolutions, Hor+ FOV, HUD and fonts sized to your screen. No plugin needed. 4:3 unchanged.
@@ -86,13 +86,13 @@ Full details, every off switch and what's been tested are in the README inside t
 
 
 ### Performance
-- Multithreading: 0, 1 or 2 helpers, picked for your CPU.
+- Multithreading v1: 0, 1 or 2 helpers, picked for your CPU.
 - Exe CPU fixes (sparse scene lists, scene-bound scanning, proximity pair removal): ~30% less main-thread work in big battles.
 - Preload Extended.
 - Explosions and hits reuse old slots instead of piling up: ~5% more FPS late in long fights, more near the end.
 - Texture compression, DDS made by the exe on first launch with an LCARS progress window.
 - Effect textures kept between missions, other textures freed when you leave one.
-- 64-bit Memory Helper.
+- 64-bit Memory Helper v1.
 - No more GPU readback every frame: the exe skips a back-buffer lock nothing used, which through the wrapper meant a full readback twice a frame.
 - Low-fragmentation heap turned on at start, so memory stays usable for longer.
 - Hull damage texture cache and texture format cache.
