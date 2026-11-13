@@ -8,7 +8,7 @@
 [![Game: Star Trek Bridge Commander](https://img.shields.io/badge/game-Star%20Trek%3A%20Bridge%20Commander%20(2002)-blue)](#)
 [![Works on stock 1.1, GOG, Remastered, Orion Delta, Legacy 1.0, Kobayashi Maru and more](https://img.shields.io/badge/works%20on-stock%201.1%20%7C%20GOG%20%7C%20Remastered%20%7C%20Orion%20Delta%20%7C%20Legacy%201.0%20%7C%20Kobayashi%20Maru%20%7C%20and%20more-blue)](#)
 
-An unofficial fan patch for **Star Trek: Bridge Commander**. One patched `stbc.exe` plus a graphics layer. No game or mod script is replaced, everything runs in memory. Works on stock 1.1 (CD, no-CD, GOG), with or without the 4 GB patch, and on mods that keep the stock scripts: Remastered, Remastered Orion (Orion Delta), Legacy 1.0, Kobayashi Maru and many more.
+An unofficial fan patch for **Star Trek: Bridge Commander**. One patched `stbc.exe` plus a graphics layer. No game or mod script is replaced, everything runs in memory. CD, no-CD or GOG, with or without the 4 GB patch.
 
 **Best experience: VonFrank's Bridge Commander: Remastered.** It's the recommended base and the one I build on, out of respect for what VonFrank has done for the community.
 
