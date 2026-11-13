@@ -16,6 +16,8 @@ I've tinkered with BC since not long after it came out, mostly just for myself, 
 
 > [!WARNING]
 > **THERE WILL BE BUGS.** This is a big refit of a 24-year-old engine, so things will break. When they do, please report them in **[Issues](https://github.com/aciddesign/STBC-Remastered-Patch/issues)** (logs help a lot, see [Problems](#problems)).
+>
+> <sub>Provided as is, with no warranty. Back up your install before patching.</sub>
 
 ## Download
 
