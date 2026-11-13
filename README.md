@@ -183,7 +183,7 @@ More is already planned, and no doubt we'll find more as we go. The aim is to ge
 - **Texture streaming.** Big textures loaded as needed, so heavy mods and HD packs fit.
 - **Planet landings.** In research, with texture streaming as the groundwork.
 - **New loading screens.** Bigger plans for these. Then again, with texture streaming, who needs loading screens? 😉
-- **Network upgrades.** Automatic port opening so hosting just works, a warning when your port is closed, the host sending missing files to players, and steadier online play in general. Started.
+- **Network upgrades.** Automatic port opening (UPnP), so you won't have to set up port forwarding yourself. Until then, hosts still need to forward the game port. Also planned: a warning when your port is closed, the host sending missing files to players, and steadier online play in general.
 - **Co-op campaign.** The story missions, together.
 - **More co-op on the bridge.** Crew at their stations, synced head-look and arm movement. Parked for now while the core features come first.
 - **Bridge co-op for roleplay groups.** Helm, Tactical, Science, Engineering, captain gives the orders.
