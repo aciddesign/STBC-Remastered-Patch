@@ -19,6 +19,8 @@ I've tinkered with BC since not long after it came out, mostly just for myself, 
 >
 > <sub>Provided as is, with no warranty. Back up your install before patching.</sub>
 
+> **2.44 is a PREVIEW / bug-testing build.** It's shared with a few testers before any announcement. Expect rough edges, and please send logs with any report.
+
 ## Download
 
 Grab the latest from **[Releases](../../releases/latest)** (patch zip + What's New). No game files here, you need your own copy.
@@ -35,16 +37,17 @@ Full details, every off switch and what's been tested are in the README inside t
 
 ## Highlights
 
-- **Multithreading (version 1).** Spare CPU cores now handle ship proximity and hull damage. This removes the multi-second proximity freezes in big battles (worst went from 6 s to 0.04 s). Smoother big battles, far fewer hitches: in our 81-ship test, hitches over 100 ms fell from 195 to about 115. Very large battles (80+ ships) can still be slow because of the AI's own planning, which is being worked on separately. More threading and optimisations to come.
+- **Multithreading (version 1).** Spare CPU cores now handle ship proximity and hull damage. This removes the multi-second proximity freezes in big battles (worst went from 6 s to 0.04 s). Smoother big battles, far fewer hitches: in our 81-ship test, hitches over 100 ms fell from 195 to 121. More threading and optimisations to come.
 - **64-bit Memory Helper (version 1).** BC is 32-bit, so everything has to fit in 4 GB and big mods and HD textures run out of room. `bchost.exe` is a separate 64-bit helper that holds big data outside the game's 4 GB and hands it back when needed. Up to 2 GB by default, 3.27 GB held in testing on real Windows. Normal visible file, nothing hidden or packed. If it's missing or stops, the game carries on. On/off in Configure, usage on the Performance Overlay. More optimisations to come.
 - **Two torpedo systems.** Ships with two torpedo types fire them separately: second torpedo panel with coloured ammo (Denacity's idea), X fires the second system. Single player, co-op and multiplayer.
 - **Co-op (beta).** Play one mission together. Crew picks seats in the lobby, shared targets, bridge view for crew.
 - **Widescreen done right, in the exe.** Real widescreen resolutions, Hor+ FOV, HUD and fonts sized to your screen. No plugin needed. 4:3 unchanged.
+- **Faster AI in big battles.** The AI's route planning reuses answers it already has and skips collision checks between ships that can't meet. Worst late-battle stall went from 1,149 ms to 37 ms in our 81-ship test.
 - **Preload Extended.** Big effect and ship textures load during the loading screen, so the first explosion doesn't stutter.
 - **New LCARS screens.** Configure, Quick Battle with 3D ship preview, New Game, Load Game, Multiplayer, quit dialog, loading screen, Startup and Shutdown Sequences.
 - **Driver-free SGSSAA.** True sparse grid supersampling built into the game through our own d3d9 layer. Any GPU, Windows and Linux, no NVIDIA driver tricks. The first game we know of with SGSSAA built in like this.
 - **Graphics.** Bloom, HDR, per-pixel lighting, ship shadows, colour grading, GPU ship highlights. Every effect has its own switch.
-- **Texture compression.** Compressed DDS textures: video memory 5.5 GB down to 3.4 GB in our tests.
+- **Texture compression.** Compressed DDS textures: video memory 6.6 GB down to 2.8 GB in our tests.
 - **Performance Overlay.** FPS, frame times, every CPU core, GPU, memory and address space.
 
 ## Everything the patch does
@@ -91,6 +94,7 @@ Full details, every off switch and what's been tested are in the README inside t
 - Multithreading v1: 0, 1 or 2 helpers, picked for your CPU.
 - Exe CPU fixes (sparse scene lists, scene-bound scanning, proximity pair removal): ~30% less main-thread work in big battles.
 - Preload Extended.
+- AI route-planning cache and collision-check skip (each half can be turned off by deleting `aipathcache.mode` or `aiskip.mode`).
 - Explosions and hits reuse old slots instead of piling up: ~5% more FPS late in long fights, more near the end.
 - Texture compression, DDS made by the exe on first launch with an LCARS progress window.
 - Effect textures kept between missions, other textures freed when you leave one.
@@ -147,8 +151,9 @@ Full details, every off switch and what's been tested are in the README inside t
 ### Co-op (beta)
 - Host and join from our LCARS screen, not the stock MP screens.
 - Lobby with seats (crew, AI or closed). Host engages when ready.
-- Join in progress, with a file check.
+- Join in progress.
 - Shared targeting, join/leave lines in chat.
+- Recent addresses are remembered across restarts.
 - Bridge view for crew: switch to the bridge and stand at the Tactical station.
 - Co-op Skirmish, Waves as a test mode.
 - *More to come.*
@@ -179,7 +184,6 @@ Full details, every off switch and what's been tested are in the README inside t
 More is already planned, and no doubt we'll find more as we go. The aim is to get the most the engine can do and show, any way we can.
 
 - **Volumetric effects.** Explosions, shockwaves, fires and warp with real depth. Next up. It was close to finished and should have been in this release, but lost backups and a bug set it back.
-- **Faster late battles.** Cutting the AI's look-ahead work that slows big battles down near the end. In progress.
 - **Fire groups.** Put your weapons into groups, with a 4th fire key. Denacity's idea.
 - **Wreck and debris limit.** Keeps the wreckage in check, with a vaporize effect for old wrecks and an Auto mode.
 - **Download ships in game.** Browse and install from inside BC.
