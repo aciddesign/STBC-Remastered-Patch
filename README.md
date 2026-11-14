@@ -24,7 +24,7 @@ I've tinkered with BC since not long after it came out, mostly just for myself, 
 ## Download
 
 **[Download 2.44 Preview (bug testing)](https://github.com/aciddesign/STBC-Remastered-Patch/releases/tag/v2.44-preview)**: the patch zip, its SHA-256 and What's New.
-All versions: **[Releases page](https://github.com/aciddesign/STBC-Remastered-Patch/releases)**. No game files here, you need your own copy.
+All versions: **[Releases page](https://github.com/aciddesign/STBC-Remastered-Patch/releases)**. No game files here, you need your own copy: **[Star Trek: Bridge Commander on GOG](https://www.gog.com/en/game/star_trek_bridge_commander)** (DRM-free, and the patch supports the GOG exe).
 
 ## Install
 
@@ -209,6 +209,8 @@ More is already planned, and no doubt we'll find more as we go. The aim is to ge
 - And a lot more.
 
 ## Thanks
+
+**Totally Games.** For making Bridge Commander in the first place. Over twenty years on, people are still flying it, modding it and finding new ways to sit in the captain's chair. None of this exists without the game they built.
 
 **Third-party parts.** Each covers one piece, and everything else is our own exe fixes and code: **AlphaYellow** (the FOV patch sites, from their MIT-licensed FOV fix), **elishacloud** (dxwrapper, zlib, the DX7 to DX9 step), **Antonio** font by Vernon Adams (SIL Open Font License, for the LCARS text), **DXVK** by Philip Rebohle and contributors (zlib, optional Vulkan).
 
