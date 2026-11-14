@@ -4,7 +4,7 @@
 [![Linux: supported](https://img.shields.io/badge/Linux%20(Proton%2FWine)-supported-2ea44f?logo=linux&logoColor=white)](#install)
 [![Steam Deck: coming soon](https://img.shields.io/badge/Steam%20Deck-coming%20soon-lightgrey?logo=steamdeck&logoColor=white)](#whats-to-come)
 [![macOS: coming soon](https://img.shields.io/badge/macOS-coming%20soon-lightgrey?logo=apple&logoColor=white)](#whats-to-come)
-[![Latest release](https://img.shields.io/github/v/release/acidtwin/STBC-Remastered-Patch?include_prereleases&label=latest%20release)](../../releases/latest)
+[![Latest release](https://img.shields.io/github/v/release/aciddesign/STBC-Remastered-Patch?include_prereleases&label=latest%20release)](https://github.com/aciddesign/STBC-Remastered-Patch/releases)
 [![Game: Star Trek Bridge Commander](https://img.shields.io/badge/game-Star%20Trek%3A%20Bridge%20Commander%20(2002)-blue)](#)
 [![Works on stock 1.1, GOG, Remastered, Orion Delta, Legacy 1.0, Kobayashi Maru and more](https://img.shields.io/badge/works%20on-stock%201.1%20%7C%20GOG%20%7C%20Remastered%20%7C%20Orion%20Delta%20%7C%20Legacy%201.0%20%7C%20Kobayashi%20Maru%20%7C%20and%20more-blue)](#)
 
@@ -23,7 +23,8 @@ I've tinkered with BC since not long after it came out, mostly just for myself, 
 
 ## Download
 
-Grab the latest from **[Releases](../../releases/latest)** (patch zip + What's New). No game files here, you need your own copy.
+**[Download 2.44 Preview (bug testing)](https://github.com/aciddesign/STBC-Remastered-Patch/releases/tag/v2.44-preview)**: the patch zip, its SHA-256 and What's New.
+All versions: **[Releases page](https://github.com/aciddesign/STBC-Remastered-Patch/releases)**. No game files here, you need your own copy.
 
 ## Install
 
