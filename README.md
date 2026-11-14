@@ -82,7 +82,7 @@ Full details, every off switch and what's been tested are in the README inside t
 
 ### Gameplay
 - Two torpedo systems (see Highlights).
-- Phasers scroll at the hardpoint's speed. Tractors use the hardpoint's colours and texture.
+- Phasers scroll at the hardpoint's speed. Tractors use the hardpoint's colours and texture. (Thanks VonFrank for reporting both.)
 - Torpedo spreads home in sooner (0.5 s, was 2 s, adjustable).
 - *Thanks to VonFrank for pushing these three weapons fixes.*
 - Weapon hits always light the hull, even on the Borg cube.
