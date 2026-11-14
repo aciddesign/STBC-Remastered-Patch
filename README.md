@@ -19,11 +19,10 @@ I've tinkered with BC since not long after it came out, mostly just for myself, 
 >
 > <sub>Provided as is, with no warranty. Back up your install before patching.</sub>
 
-> **2.44 is a PREVIEW / bug-testing build.** It's shared with a few testers before any announcement. Expect rough edges, and please send logs with any report.
 
 ## Download
 
-**[Download 2.44 Preview (bug testing)](https://github.com/aciddesign/STBC-Remastered-Patch/releases/tag/v2.44-preview)**: the patch zip, its SHA-256 and What's New.
+**[Download 2.45](https://github.com/aciddesign/STBC-Remastered-Patch/releases/tag/v2.45)**: the patch zip, its SHA-256 and What's New.
 All versions: **[Releases page](https://github.com/aciddesign/STBC-Remastered-Patch/releases)**. No game files here, you need your own copy: **[Star Trek: Bridge Commander on GOG](https://www.gog.com/en/game/star_trek_bridge_commander)** (DRM-free, and the patch supports the GOG exe).
 
 ## Install
