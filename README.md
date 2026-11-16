@@ -22,7 +22,9 @@ I've tinkered with BC since not long after it came out, mostly just for myself, 
 
 ## Download
 
-**[Download 2.45](https://github.com/aciddesign/STBC-Remastered-Patch/releases/tag/v2.45)**: the patch zip, its SHA-256 and What's New.
+> **2.46 is a BETA Preview for feedback/testing.** Everything is in testing, nothing is final. It moves to the normal Release once testers confirm it works. Best on a clean stock, or Remastered with or without Orion. I'm on Linux, so Windows testers are vital.
+
+**[Download 2.46 BETA Preview](https://github.com/aciddesign/STBC-Remastered-Patch/releases/tag/v2.46-beta-preview)**: the patch zip, its SHA-256 and What's New. Previous release: **[2.45](https://github.com/aciddesign/STBC-Remastered-Patch/releases/tag/v2.45)**.
 All versions: **[Releases page](https://github.com/aciddesign/STBC-Remastered-Patch/releases)**. No game files here, you need your own copy: **[Star Trek: Bridge Commander on GOG](https://www.gog.com/en/game/star_trek_bridge_commander)** (DRM-free, and the patch supports the GOG exe).
 
 ## Install
