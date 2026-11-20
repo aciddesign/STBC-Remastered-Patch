@@ -22,9 +22,9 @@ I've tinkered with BC since not long after it came out, mostly just for myself, 
 
 ## Download
 
-> **2.46 is a BETA Preview for feedback/testing.** Everything is in testing, nothing is final. It moves to the normal Release once testers confirm it works. Best on a clean stock, or Remastered with or without Orion. I'm on Linux, so Windows testers are vital.
+> **2.47 is a BETA Preview for feedback/testing.** Everything is in testing, nothing is final. It moves to the normal Release once testers confirm it works. Best on a clean stock, or Remastered with or without Orion. I'm on Linux, so Windows testers are vital.
 
-**[Download 2.46 BETA Preview](https://github.com/aciddesign/STBC-Remastered-Patch/releases/tag/v2.46-beta-preview)**: the patch zip, its SHA-256 and What's New. Previous release: **[2.45](https://github.com/aciddesign/STBC-Remastered-Patch/releases/tag/v2.45)**.
+**[Download 2.47 BETA Preview](https://github.com/aciddesign/STBC-Remastered-Patch/releases/tag/v2.47-beta-preview)**: the patch zip, its SHA-256, What's New and the Testing focus. Previous: **[2.46 BETA Preview](https://github.com/aciddesign/STBC-Remastered-Patch/releases/tag/v2.46-beta-preview)**, **[2.45](https://github.com/aciddesign/STBC-Remastered-Patch/releases/tag/v2.45)**.
 All versions: **[Releases page](https://github.com/aciddesign/STBC-Remastered-Patch/releases)**. No game files here, you need your own copy: **[Star Trek: Bridge Commander on GOG](https://www.gog.com/en/game/star_trek_bridge_commander)** (DRM-free, and the patch supports the GOG exe).
 
 ## Install
@@ -33,24 +33,54 @@ All versions: **[Releases page](https://github.com/aciddesign/STBC-Remastered-Pa
 2. Windows 10/11: run `PATCH.bat`. Nothing else to install. If Windows blocks it: right-click the zip, Properties, tick Unblock, unzip again.
 3. Linux (Steam/Proton, Lutris, Wine): run `./patch.sh`.
    Tested on, and works best with, **Proton-CachyOS** (SLR build `proton-cachyos-slr-20261005`).
+   Steam launch options: `WINEDLLOVERRIDES="ddraw=n,b;dsound=n,b" %command%` (dsound is for 3D Sound).
 4. Remove: `UNDO.bat` (Linux: `./patch.sh undo`).
 
 Full details, every off switch and what's been tested are in the README inside the zip.
 
 ## Highlights
 
+- **New in 2.47: Themes.** The menus' colours now come from themes, switched live from the new **Themes tab** on the main menu (or Configure). LcarsNX, stock and your mod's own menus stay the default; a TNG theme is in as a preview, Orion Delta's own themes show up when Orion is installed, and theme packs can be dropped into the Themes folder. This is the first part: more is coming.
+- **New in 2.47: a new LcarsNX main menu and a redesigned Configure** with proper dropdowns, colour schemes for LcarsNX, and opt-in Live light for the backlit panels.
+- **New in 2.47: anti-aliasing modes.** SGSSAA, NVIDIA DLAA, AMD FSR 3.1, Intel XeSS, FXAA and Downsampling, picked in Configure > AA Mode on every menu type.
+- **New in 2.47: widescreen by default, 3D Sound (OpenAL), co-op from any menu, a working bridge viewscreen, and backlit LCARS panels (opt-in).**
 - **Multithreading (version 1).** Spare CPU cores now handle ship proximity and hull damage. This removes the multi-second proximity freezes in big battles (worst went from 6 s to 0.04 s). Smoother big battles, far fewer hitches: in our 81-ship test, hitches over 100 ms fell from 195 to 121. More threading and optimisations to come.
 - **64-bit Memory Helper (version 1).** BC is 32-bit, so everything has to fit in 4 GB and big mods and HD textures run out of room. `bchost.exe` is a separate 64-bit helper that holds big data outside the game's 4 GB and hands it back when needed. Up to 2 GB by default, 3.27 GB held in testing on real Windows. Normal visible file, nothing hidden or packed. If it's missing or stops, the game carries on. On/off in Configure, usage on the Performance Overlay. More optimisations to come.
+- **Torpedo lifetime from the script (2.47).** A torpedo script's GetLifetime() is honoured with no 60 s limit; torpedoes without one live 20 s.
 - **Two torpedo systems.** Ships with two torpedo types fire them separately: second torpedo panel with coloured ammo (Denacity's idea), X fires the second system. Single player, co-op and multiplayer.
 - **Co-op (beta).** Play one mission together. Crew picks seats in the lobby, shared targets, bridge view for crew.
 - **Widescreen done right, in the exe.** Real widescreen resolutions, Hor+ FOV, HUD and fonts sized to your screen. No plugin needed. 4:3 unchanged.
-- **Faster AI in big battles.** The AI's route planning reuses answers it already has and skips collision checks between ships that can't meet. Worst late-battle stall went from 1,149 ms to 37 ms in our 81-ship test.
+- **Faster AI in big battles (really on from 2.47).** The AI's route planning reuses answers it already has and skips collision checks between ships that can't meet. Worst late-battle stall went from 1,149 ms to 37 ms in our 81-ship test.
 - **Preload Extended.** Big effect and ship textures load during the loading screen, so the first explosion doesn't stutter.
 - **New LCARS screens.** Configure, Quick Battle with 3D ship preview, New Game, Load Game, Multiplayer, quit dialog, loading screen, Startup and Shutdown Sequences.
 - **Driver-free SGSSAA.** True sparse grid supersampling built into the game through our own d3d9 layer. Any GPU, Windows and Linux, no NVIDIA driver tricks. The first game we know of with SGSSAA built in like this.
 - **Graphics.** Bloom, HDR, per-pixel lighting, ship shadows, colour grading, GPU ship highlights. Every effect has its own switch.
 - **Texture compression.** Compressed DDS textures: video memory 6.6 GB down to 2.8 GB in our tests.
 - **Performance Overlay.** FPS, frame times, every CPU core, GPU, memory and address space.
+
+## Bug fixes in 2.47 (fixed, please test)
+
+- **Faint whine on some sounds and music**: sound output back to stock 22050 Hz (Windows and Linux); a rate you set yourself is kept. Thanks **VonFrank42**.
+- **SunNX: ships drawing through each other when the sun is on screen, jagged sun edge.** Thanks **VonFrank42**.
+- **A dark disc flickering on moons seen through the bridge viewscreen.** Thanks **VonFrank42**.
+- **VonFrank's menus: the LCARS theme can now be picked, and his own intro still plays in fullscreen.** Thanks **VonFrank42**.
+- **Second torpedo system: power use and the Weapons power slider now count both systems.**
+- **Orion / Bedrock: Quick Battle lists the ships inside class sub-menus** (pick, add and fly them). Thanks **Denacity**.
+- **KM (Kobayashi Maru): no more crash from JaggieFix on startup.**
+- **Crash on quitting after loading a campaign save**; old saves load safely. Saving and loading now skip a broken object instead of crashing (logged to saveload-fix.log).
+- **Field of view stuck after changing resolution** (an old stock bug).
+- **Co-op needed the LCARS menu**: it opens from any menu now.
+- **Configure options missing on Classic / stock / Orion / KM menus**: the effect sliders, PlanetNX / SunNX and AA Mode are under Configure > Graphics.
+- **Lower-end graphics without DXVK: texture preloading is off by default**, which stops a crash from running out of memory at high AA.
+- **The log's first line said version 2.11**; it shows 2.47 now. Thanks **VonFrank42**, **Daimo** and **Alex400ZZ** for the logs.
+- **Themes tab: long lists scroll, and the drawer opens above the Performance Overlay.**
+- **AI speed-up (since 2.44) was never switched on** for players; it is on now.
+- **Quick Battle drag and drop** is back.
+- Still to confirm from 2.46: the display auto-fix for old or modded setups (thanks **ACR2023**, **Morgan**, **Alex400ZZ**), less stutter at mission start.
+
+Please also check: Linux without DXVK / native d3d9: texture preload stays off by design (it should run as stock there).
+
+Tell me in **[Issues](https://github.com/aciddesign/STBC-Remastered-Patch/issues)** if any of them still happen.
 
 ## Everything the patch does
 
@@ -64,6 +94,9 @@ Full details, every off switch and what's been tested are in the README inside t
 - 24-bit depth buffer, far less surface flicker.
 - Menu videos fall back to the largest that fits. Bink made crash-safe in memory.
 - Reworked fullscreen video: the 1080 intro, logo, credits and end movies play cleanly.
+- Widescreen is the default: new installs start at your desktop size (16:9 or wider); old 640x480 / 800x600 / 1024x768 setups move to it.
+- The view widens / narrows at once when you change resolution in game.
+- HUD Scale, Menu Scale and HUD Width in Configure.
 - New Skip Intro Video menu option (General, and the LCARS Display page): turn it on and the opening movies are skipped every launch. Off by default.
 - Faster windowed mode and loading screens.
 - Smooth motion even after days of uptime (no UptimeFaker needed).
@@ -78,11 +111,17 @@ Full details, every off switch and what's been tested are in the README inside t
 - Bridge camera shake away from the hit side, with a switch and strength slider.
 - The Esc menu cursor keeps its spot.
 - Mouse wheel sets ship speed outside menus.
+- **Controller support (early version):** Xbox-style (XInput) pads and mouse buttons 4 / 5 bindable in Configure > Controls, LB / RB layers for extra binds, default pad bindings. On by default.
+  - It's in and usable now, but this is an EARLY version. What's coming:
+    - **Next:** the game will support pads properly, with a strong set of default bindings and new UI made for the pad (hold a button for a quick radial menu, menus and screens you can drive with the pad), so it plays like a pad-optimised game for those who want it.
+    - **After that:** HOTAS / joystick support.
+  - Updated in this build: the Controls page shows Xbox button names, turn and roll keep their keyboard keys with a pad plugged in, and pad binds you hold down no longer come back as an empty key after a restart.
+  - Problems? Set `[ControllerNX] Enabled|0` in options.cfg to turn it off.
 - *More to come.*
 
 
 ### Gameplay
-- Two torpedo systems (see Highlights).
+- Two torpedo systems (see Highlights). The second system draws its own power and follows the Weapons slider.
 - Phasers scroll at the hardpoint's speed. Tractors use the hardpoint's colours and texture. (Thanks VonFrank for reporting both.)
 - Torpedo spreads home in sooner (0.5 s, was 2 s, adjustable).
 - *Thanks to VonFrank for pushing these three weapons fixes.*
@@ -110,7 +149,11 @@ Full details, every off switch and what's been tested are in the README inside t
 
 
 ### Graphics
-- SGSSAA anti-aliasing. Smooths the 3D scene only, menus untouched. Heavy on the GPU. Tested on NVIDIA and Intel, AMD not tested yet.
+- Anti-aliasing modes (Configure > AA Mode): SGSSAA, NVIDIA DLAA, AMD FSR 3.1 native AA, Intel XeSS native AA, FXAA, plus Downsampling 1.5x / 2x. 3D scene only, menus untouched.
+- PlanetNX and SunNX: new planets (atmosphere, clouds, city lights) and an animated sun with an HD lens flare.
+- ViewscreenNX: the bridge viewscreen picture sits flat at every head angle; the targeting box follows the ship to the edge.
+- Effects look the same with AA on or off; graphics settings live in options.cfg under their own headings.
+- Backlit LCARS panels (Gel, Smoked, Filmed): opt-in, Off by default, in the Themes tab.
 - Switchable effects: Glow Bloom, HDR Scene (FP16), Glow Shimmer Fix, Per-Pixel Lighting, Deband, Rim Light, Ship Shadows, Colour Grade, Planet Glow, Heat Ripple.
 - GPU ship highlights (~7.5% faster).
 - DXVK (Vulkan) set up automatically when supported.
@@ -122,16 +165,19 @@ Full details, every off switch and what's been tested are in the README inside t
 
 
 ### Sound
-- High Quality: 64 voices, Full HRTF, 44.1 kHz.
+- High Quality: 64 voices, Full HRTF (stock 22050 Hz output, no whine).
+- 3D Sound (OpenAL): DSOAL + OpenAL Soft, with Headphones / Speakers / 5.1 / 7.1 and HRTF. Off until you pick it.
 - *More to come.*
 
 
 ### LCARS screens
 - Configure: sliders, profiles, Mod Menus page, live previews from the Esc menu.
 - On/off switches in Configure > Graphics for Multithreading, Memory Helper and Two Torpedo Systems. Turning torpedoes off brings back the stock weapons panel from the next mission.
-- Themes: Classic (the stock look) or LcarsNX (our LCARS screens), picked in Configure and switched without restarting. Classic is the default on stock and Remastered.
+- Themes: Classic (the stock look), LcarsNX and colour scheme packs (TNG 2357 / 2369 / 2375, LCARS Picard / Nemesis), sharp at any resolution, switched live from the Themes tab on the main menu or Configure. Your existing menus stay the default.
+- Classic, stock and mod menus get the graphics sliders and AA Mode under Configure > Graphics.
+- Configure profile bar: Save / Load / Defaults. LcarsNX Configure uses proper dropdowns, with Colour Scheme and Live light under General.
 - Main menu top bar, New Game, Load Game, Multiplayer (plus in-game Esc page), quit dialog.
-- Quick Battle that reads your install's ships and regions (no Foundation needed), with 3D preview.
+- Quick Battle that reads your install's ships and regions (no Foundation needed), with 3D ship and bridge previews and drag and drop into the teams.
 - Quick Battle Spectate mode with its own camera.
 - Early optional cinematic cameras: F7 Duel Cam, F8 War Correspondent. More to come.
 - Glass LCARS: backlit panels, sharp fonts, calmer in-battle Configure backdrop.
@@ -151,6 +197,7 @@ Full details, every off switch and what's been tested are in the README inside t
 
 
 ### Co-op (beta)
+- Opens from any menu theme (Classic, LCARS, mod menus).
 - Host and join from our LCARS screen, not the stock MP screens.
 - Lobby with seats (crew, AI or closed). Host engages when ready.
 - Join in progress.
@@ -164,6 +211,7 @@ Full details, every off switch and what's been tested are in the README inside t
 ### Stability and logs
 - Crash guards for known stock crashes (freed objects, failed allocations, Python None, 16 MB main thread stack). Fixes for crashes on quit, changing Sound Quality and skipping the intro.
 - Saving fixed (it had quietly broken). Old saves still load.
+- No crash when you quit after loading a campaign save; saving and loading skip a broken object instead of crashing.
 - The crash writer no longer crashes itself, so you get a real report.
 - Configure > resolution > Multiplayer crash fixed.
 - No crash after the intro on mods like KM.
@@ -180,6 +228,15 @@ Full details, every off switch and what's been tested are in the README inside t
 - Script fixes only go over stock files. A mod's own version is left alone.
 - Checks for Vulkan first, and leaves DXVK out with a warning if your PC can't run it (no black screen).
 - It talks like the Enterprise computer: "Working.", "Please confirm.", "Unable to comply.", "Program complete."
+
+## Coming next: a new UI system (for theme makers)
+The menus are moving to a new UI layer built on RmlUi, an HTML / CSS-style UI kit, drawn by our own renderer inside the game. It's being tested now and isn't in this build.
+- **Themes become files you can edit:** layouts in markup, looks in stylesheets. Make a full theme, or just a colour scheme for an existing one.
+- **Lots of options:** your own layouts, fonts and colours; animations and transitions; gradients; blur, glow and drop-shadow filters; vector (SVG) art.
+- **After Effects animations:** animated pieces made in Adobe After Effects and exported as Lottie files can play in a theme.
+- **Sharp at any resolution**, with live reload while you edit, so you see changes straight away.
+- **Drop-in theme folders** that the Themes tab lists, and later a small theme-maker app to build, export and share themes.
+- Today's colour-scheme packs (theme.cfg) keep working.
 
 ## What's to come
 
@@ -213,7 +270,7 @@ More is already planned, and no doubt we'll find more as we go. The aim is to ge
 
 **Totally Games.** For making Bridge Commander in the first place. Over twenty years on, people are still flying it, modding it and finding new ways to sit in the captain's chair. None of this exists without the game they built.
 
-**Third-party parts.** Each covers one piece, and everything else is our own exe fixes and code: **AlphaYellow** (the FOV patch sites, from their MIT-licensed FOV fix), **elishacloud** (dxwrapper, zlib, the DX7 to DX9 step), **Antonio** font by Vernon Adams (SIL Open Font License, for the LCARS text), **DXVK** by Philip Rebohle and contributors (zlib, optional Vulkan).
+**Third-party parts.** Each covers one piece, and everything else is our own exe fixes and code: **AlphaYellow** (the FOV patch sites, from their MIT-licensed FOV fix), **elishacloud** (dxwrapper, zlib, the DX7 to DX9 step), **Antonio** font by Vernon Adams (SIL Open Font License, for the LCARS text), **DXVK** by Philip Rebohle and contributors (zlib, optional Vulkan), **DSOAL and OpenAL Soft** by Chris Robinson (kcat) (LGPL, 3D Sound), **NVIDIA DLSS** (DLAA), **AMD FidelityFX FSR 3.1** (MIT), **Intel(R) Xe Super Sampling (XeSS) SDK: Copyright (C) 2025 Intel Corporation**, **FXAA 3.11** by Timothy Lottes / NVIDIA.
 
 **VonFrank.** He won't say it, so I will. He spent years on Bridge Commander: Remastered for the community and for new players. Back then BC was a crashing, buggy mess whatever mod you ran, and Remastered finally made it stable. Because of him new players came, YouTubers took an interest, and new modders, ships and ideas followed. People had ideas and talked a lot, but a domino had missed and everything stalled, leaving just talk and dead projects. He flicked the next one, and many of the engine-level projects going on now, this one included, follow from that. Thanks too for all the advice and ideas on this patch, and for pushing the weapons work: torpedoes, phasers and tractors, systems I'd never dug into. It's the least he deserves.
 
@@ -232,6 +289,8 @@ More is already planned, and no doubt we'll find more as we go. The aim is to ge
 ## Problems
 
 Run `COLLECT-LOGS.bat` (Linux: `./patch.sh logs`), then send the zip it makes with a short note on what happened. Open an issue in **[Issues](../../issues)** here.
+
+Controller causing trouble? Close the game and set `[ControllerNX] Enabled|0` in options.cfg.
 
 ---
 
