@@ -24,7 +24,7 @@ I've tinkered with BC since not long after it came out, mostly just for myself, 
 
 > **2.47 is a BETA Preview for feedback/testing.** Everything is in testing, nothing is final. It moves to the normal Release once testers confirm it works. Best on a clean stock, or Remastered with or without Orion. I'm on Linux, so Windows testers are vital.
 
-**[Download 2.47 BETA Preview](https://github.com/aciddesign/STBC-Remastered-Patch/releases/tag/v2.47-beta-preview)**: the patch zip, its SHA-256, What's New and the Testing focus. Previous: **[2.46 BETA Preview](https://github.com/aciddesign/STBC-Remastered-Patch/releases/tag/v2.46-beta-preview)**, **[2.45](https://github.com/aciddesign/STBC-Remastered-Patch/releases/tag/v2.45)**.
+**[Download 2.47.1 BETA Preview](https://github.com/aciddesign/STBC-Remastered-Patch/releases/tag/v2.47.1-beta-preview)**: the patch zip, its SHA-256, What's New and the Testing focus. Previous: **[2.47 BETA Preview](https://github.com/aciddesign/STBC-Remastered-Patch/releases/tag/v2.47-beta-preview)**, **[2.46 BETA Preview](https://github.com/aciddesign/STBC-Remastered-Patch/releases/tag/v2.46-beta-preview)**, **[2.45](https://github.com/aciddesign/STBC-Remastered-Patch/releases/tag/v2.45)**.
 All versions: **[Releases page](https://github.com/aciddesign/STBC-Remastered-Patch/releases)**. No game files here, you need your own copy: **[Star Trek: Bridge Commander on GOG](https://www.gog.com/en/game/star_trek_bridge_commander)** (DRM-free, and the patch supports the GOG exe).
 
 ## Install
@@ -59,6 +59,8 @@ Full details, every off switch and what's been tested are in the README inside t
 - **Performance Overlay.** FPS, frame times, every CPU core, GPU, memory and address space.
 
 ## Bug fixes in 2.47 (fixed, please test)
+
+- **2.47.1: Windows crash at the main menu** fixed (borderless full screen + a small window guard, BCHookProof.dll), and your own dxwrapper.ini lines are now kept. Thanks **Daimo** for testing. Windowed play with VSync on no longer tears (thanks **Denacity**), and the Themes tab also shows when you press Esc in a battle.
 
 - **Faint whine on some sounds and music**: sound output back to stock 22050 Hz (Windows and Linux); a rate you set yourself is kept. Thanks **VonFrank42**.
 - **SunNX: ships drawing through each other when the sun is on screen, jagged sun edge.** Thanks **VonFrank42**.
@@ -97,6 +99,7 @@ Tell me in **[Issues](https://github.com/aciddesign/STBC-Remastered-Patch/issues
 - Widescreen is the default: new installs start at your desktop size (16:9 or wider); old 640x480 / 800x600 / 1024x768 setups move to it.
 - The view widens / narrows at once when you change resolution in game.
 - HUD Scale, Menu Scale and HUD Width in Configure.
+- **UI scaling (2.47) for big screens (1440p, 4K, ultrawide):** HUD Scale and Menu Scale make the flight HUD and the menus bigger, and HUD Width pulls the HUD in on ultrawide. All three are in Configure. Thanks **Avalon304** and the 4K players who asked for it.
 - New Skip Intro Video menu option (General, and the LCARS Display page): turn it on and the opening movies are skipped every launch. Off by default.
 - Faster windowed mode and loading screens.
 - Smooth motion even after days of uptime (no UptimeFaker needed).
