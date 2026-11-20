@@ -24,7 +24,7 @@ I've tinkered with BC since not long after it came out, mostly just for myself, 
 
 > **2.47 is a BETA Preview for feedback/testing.** Everything is in testing, nothing is final. It moves to the normal Release once testers confirm it works. Best on a clean stock, or Remastered with or without Orion. I'm on Linux, so Windows testers are vital.
 
-**[Download 2.47.1 BETA Preview](https://github.com/aciddesign/STBC-Remastered-Patch/releases/tag/v2.47.1-beta-preview)**: the patch zip, its SHA-256, What's New and the Testing focus. Previous: **[2.47 BETA Preview](https://github.com/aciddesign/STBC-Remastered-Patch/releases/tag/v2.47-beta-preview)**, **[2.46 BETA Preview](https://github.com/aciddesign/STBC-Remastered-Patch/releases/tag/v2.46-beta-preview)**, **[2.45](https://github.com/aciddesign/STBC-Remastered-Patch/releases/tag/v2.45)**.
+**[Download 2.47.2 BETA Preview](https://github.com/aciddesign/STBC-Remastered-Patch/releases/tag/v2.47.2-beta-preview)**: the patch zip, its SHA-256, What's New and the Testing focus. Previous: **[2.47.1 BETA Preview](https://github.com/aciddesign/STBC-Remastered-Patch/releases/tag/v2.47.1-beta-preview)**, **[2.47 BETA Preview](https://github.com/aciddesign/STBC-Remastered-Patch/releases/tag/v2.47-beta-preview)**, **[2.46 BETA Preview](https://github.com/aciddesign/STBC-Remastered-Patch/releases/tag/v2.46-beta-preview)**, **[2.45](https://github.com/aciddesign/STBC-Remastered-Patch/releases/tag/v2.45)**.
 All versions: **[Releases page](https://github.com/aciddesign/STBC-Remastered-Patch/releases)**. No game files here, you need your own copy: **[Star Trek: Bridge Commander on GOG](https://www.gog.com/en/game/star_trek_bridge_commander)** (DRM-free, and the patch supports the GOG exe).
 
 ## Install
@@ -60,6 +60,7 @@ Full details, every off switch and what's been tested are in the README inside t
 
 ## Bug fixes in 2.47 (fixed, please test)
 
+- **2.47.2: Configure lines up on ultrawide screens** (21:9 and wider).
 - **2.47.1: Windows crash at the main menu** fixed (borderless full screen + a small window guard, BCHookProof.dll), and your own dxwrapper.ini lines are now kept. Thanks **Daimo** for testing. Windowed play with VSync on no longer tears (thanks **Denacity**), and the Themes tab also shows when you press Esc in a battle.
 
 - **Faint whine on some sounds and music**: sound output back to stock 22050 Hz (Windows and Linux); a rate you set yourself is kept. Thanks **VonFrank42**.
